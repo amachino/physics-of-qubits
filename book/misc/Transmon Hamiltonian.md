@@ -206,12 +206,14 @@ $$
 
 となる。
 
-| $n$      | $n+1$    | $\omega_n$           |
-| -------- | -------- | -------------------- |
-| $0$      | $1$      | $\omega_0$           |
-| $1$      | $2$      | $\omega_0 + \alpha$  |
-| $2$      | $3$      | $\omega_0 + 2\alpha$ |
-| $\vdots$ | $\vdots$ | $\vdots$             |
-| $n$      | $n+1$    | $\omega_0 + n\alpha$ |
+| $n$      | $E_n$                                                                 | $\omega_n$           |
+| -------- | --------------------------------------------------------------------- | -------------------- |
+| $0$      | $0$                                                                   | $\omega_0$           |
+| $1$      | $\omega_0$                                                            | $\omega_0 + \alpha$  |
+| $2$      | $2\omega_0 + \alpha$                                                  | $\omega_0 + 2\alpha$ |
+| $3$      | $3\omega_0 + 3 \alpha$                                                | $\omega_0 + 3\alpha$ |
+| $4$      | $4\omega_0 + 6 \alpha$                                                | $\omega_0 + 4\alpha$ |
+| $\vdots$ | $\vdots$                                                              | $\vdots$             |
+| $n$      | $\left( \omega_0 - \frac{\alpha}{2} \right) n + \frac{\alpha}{2} n^2$ | $\omega_0 + n\alpha$ |
 
-トランズモンでは $\alpha < 0$ であるため、$n$ が大きくなるほど、エネルギー準位差 $\omega_n$ は $|\alpha|$ ずつ小さくなることを表している。
+トランズモンでは $\alpha < 0$ であるため、$n$ の増加に従って、エネルギー準位差 $\omega_n$ は $|\alpha|$ ずつ小さくなる。

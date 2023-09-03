@@ -2,80 +2,105 @@
 
 ## ハミルトニアン
 
-$N$ 準位量子系と $M$ 準位量子系の間の結合を考えよう。相互作用のないときのハミルトニアンは、それぞれ
+2 つの量子系 $H_1, H_2$ が結合する状況を考えよう。
+
+$H_1$ は $M$ 次元、 $H_2$ は $N$ 次元で表せるものとし、単独のハミルトニアンは、それぞれ
 
 $$
 \begin{aligned}
-H_1 &= \sum_{k=0}^{M-1} E_1^{(k)} \ket{k}_1 \bra{k}_1 \\
+H_1 &= \sum_{n=0}^{M-1} E_1^{(n)} \ket{n}_1 \bra{n}_1 \\
 &= \begin{pmatrix}
-E_1^{(0)} & & & \\
-& E_1^{(1)} & & \\
-& & \ddots & \\
-& & & E_1^{(M-1)}
+E_1^{(0)} & 0 & \cdots & 0 \\
+0 & E_1^{(1)} & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & E_1^{(M-1)}
 \end{pmatrix} \\
-H_2 &= \sum_{k=0}^{N-1} E_2^{(k)} \ket{k}_2 \bra{k}_2 \\
+H_2 &= \sum_{n=0}^{N-1} E_2^{(n)} \ket{n}_2 \bra{n}_2 \\
 &= \begin{pmatrix}
-E_2^{(0)} & & & \\
-& E_2^{(1)} & & \\
-& & \ddots & \\
-& & & E_2^{(N-1)}
-\end{pmatrix} \\
+E_2^{(0)} & 0 & \cdots & 0 \\
+0 & E_2^{(1)} & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & E_2^{(N-1)}
+\end{pmatrix}
 \end{aligned}
 $$
 
-と表されているとする。また、結合定数を $g$ として、相互作用項は
+と表されているとする。
+
+例えば、調和振動子であれば、
+
+$$
+\begin{aligned}
+E^{(n)} &= \omega n
+\end{aligned}
+$$
+
+トランズモンであれば、
+
+$$
+\begin{aligned}
+E^{(n)} &= \left( \omega - \frac{\alpha}{2} \right) n + \frac{\alpha}{2} n^2
+\end{aligned}
+$$
+
+である。
+
+また、結合定数を $g$ として、相互作用項は
 
 $$
 \begin{aligned}
 H_{\mathrm{int}} &= g
-\sum_{k=0}^{M-1} \left( \sqrt{k+1} \ket{k+1}_1 \bra{k}_1
+\sum_{n=0}^{M-2} \left( \sqrt{n+1} \ket{n+1}_1 \bra{n}_1
 \right)
 \otimes
-\sum_{k=0}^{N-1} \left( \sqrt{k} \ket{k}_2 \bra{k+1}_2
+\sum_{n=0}^{N-2} \left( \sqrt{n+1} \ket{n}_2 \bra{n+1}_2
 \right) \\
 &+ g
-\sum_{k=0}^{M-1} \left( \sqrt{k} \ket{k}_1 \bra{k+1}_1
+\sum_{n=0}^{M-2} \left( \sqrt{n+1} \ket{n}_1 \bra{n+1}_1
 \right)
 \otimes
-\sum_{k=0}^{N-1} \left( \sqrt{k+1} \ket{k+1}_2 \bra{k}_2
+\sum_{n=0}^{N-2} \left( \sqrt{n+1} \ket{n+1}_2 \bra{n}_2
 \right)
 \\
 &= g
 \begin{pmatrix}
-0 & \sqrt{1} & & & \\
-& 0 & \sqrt{2} & & \\
-& & \ddots & \ddots & \\
-& & & 0 & \sqrt{M-1} \\
-& & & & 0 \\
+0 & 0 & \cdots & 0 & 0 \\
+\sqrt{1} & 0 & \cdots & 0 & 0 \\
+0 & \sqrt{2} & \cdots & 0 & 0 \\
+\vdots & \vdots & \ddots & \vdots & \vdots \\
+0 & 0 & \cdots & \sqrt{M-1} & 0
 \end{pmatrix}
 \otimes
 \begin{pmatrix}
-0 & & & & \\
-\sqrt{1} & 0 & & & \\
-& \sqrt{2} & 0 & & \\
-& & \ddots & \ddots & \\
-& & & \sqrt{N-1} & 0 \\
-\end{pmatrix} \\
+0 & \sqrt{1} & 0 & \cdots & 0 \\
+0 & 0 & \sqrt{2} & 0 & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \cdots & \sqrt{N-1} \\
+0 & 0 & 0 & \cdots & 0
+\end{pmatrix}
+\\
 &+ g
 \begin{pmatrix}
-0 & & & & \\
-\sqrt{1} & 0 & & & \\
-& \sqrt{2} & 0 & & \\
-& & \ddots & \ddots & \\
-& & & \sqrt{M-1} & 0 \\
+0 & \sqrt{1} & 0 & \cdots & 0 \\
+0 & 0 & \sqrt{2} & \cdots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \cdots & \sqrt{M-1} \\
+0 & 0 & 0 & \cdots & 0
 \end{pmatrix}
 \otimes
 \begin{pmatrix}
-0 & \sqrt{1} & & & \\
-& 0 & \sqrt{2} & & \\
-& & \ddots & \ddots & \\
-& & & 0 & \sqrt{N-1} \\
-& & & & 0 \\
+0 & 0 & \cdots & 0 & 0 \\
+\sqrt{1} & 0 & \cdots & 0 & 0 \\
+0 & \sqrt{2} & \cdots & 0 & 0 \\
+\vdots & \vdots & \ddots & \vdots & \vdots \\
+0 & 0 & \cdots & \sqrt{N-1} & 0
 \end{pmatrix}
 \end{aligned}
 $$
 
-とする。このとき、全体のハミルトニアンは
+であるとする。
+
+このとき、全体のハミルトニアンは、
 
 $$
 \begin{aligned}
@@ -85,4 +110,4 @@ H &= H_1 \otimes I_2
 \end{aligned}
 $$
 
-となる。
+で表され、 $M \times N$ 次元の正方行列となる。

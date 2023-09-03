@@ -1,4 +1,4 @@
-# 生成消滅演算子の行列表現
+# 有限次元での生成消滅演算子の行列表現
 
 $N$ 個の状態ベクトル
 
@@ -42,17 +42,17 @@ $$
 \end{aligned}
 $$
 
-また、 $|i \rangle \langle j|$ は、$i$ 行 $j$ 列の成分が $1$ で他が $0$ の行列であるから、 $(i, j)$ 成分が $O_{ij}$ で表される行列は
+このとき、 $|i \rangle \langle j|$ は、$i$ 行 $j$ 列の成分が $1$ で他が $0$ の行列になるから、 $(i, j)$ 成分が $O_{ij}$ で表される行列は
 
 $$
 \begin{aligned}
-\hat{O} = \sum_{i,\ j} O_{ij} |i \rangle \langle j|
+\hat{O} = \sum_{i, j} O_{ij} |i \rangle \langle j|
 \end{aligned}
 $$
 
 と書くこともできる。
 
-さて、生成消滅演算子 $\hat{a}, \hat{a}^\dagger$ を行列表記してみよう。
+さて、この $N$ 次元ベクトル空間で、生成消滅演算子 $\hat{a}, \hat{a}^\dagger$ を行列表記してみよう。
 
 消滅演算子 $\hat{a}$ は状態を $1$ 下げ、生成演算子 $\hat{a}^\dagger$ は状態を $1$ 上げる演算子であり、
 
@@ -85,7 +85,7 @@ $$
 0 & 0 & 0 & \cdots & \sqrt{N-1} \\
 0 & 0 & 0 & \cdots & 0
 \end{pmatrix} \\
-&= \sum_{k=0}^{N-2} \sqrt{k+1} \ket{k} \bra{k+1}
+&= \sum_{n=0}^{N-2} \sqrt{n+1} \ket{n} \bra{n+1}
 \end{aligned}
 $$
 
@@ -100,11 +100,11 @@ $$
 \vdots & \vdots & \ddots & \vdots & \vdots \\
 0 & 0 & \cdots & \sqrt{N-1} & 0
 \end{pmatrix} \\
-&= \sum_{k=0}^{N-2} \sqrt{k+1} \ket{k+1} \bra{k}
+&= \sum_{n=0}^{N-2} \sqrt{n+1} \ket{n+1} \bra{n}
 \end{aligned}
 $$
 
-と表される。
+と表すことができる。
 
 $$
 \begin{aligned}
@@ -133,7 +133,7 @@ $$
 0 & 0 & 0 & \cdots & N-1 & 0 \\
 0 & 0 & 0 & \cdots & 0 & 0
 \end{pmatrix} \\
-&= \sum_{k=0}^{N-2} (k+1) \ket{k} \bra{k}
+&= \sum_{n=0}^{N-2} (n+1) \ket{n} \bra{n}
 \end{aligned}
 $$
 
@@ -164,7 +164,7 @@ $$
 0 & 0 & 0 & \cdots & N-2 & 0 \\
 0 & 0 & 0 & \cdots & 0 & N-1
 \end{pmatrix} \\
-&= \sum_{k=0}^{N-1} k \ket{k} \bra{k}
+&= \sum_{n=0}^{N-1} n \ket{n} \bra{n}
 \end{aligned}
 $$
 
@@ -206,7 +206,7 @@ $$
 
 である。
 
-有限の $N$ 次元行列で表現したとき、 $\hat{a} \hat{a}^\dagger - \hat{a}^\dagger \hat{a} = 1$ とはならないことに注意しよう。
+有限の $N \times N$ 行列で表現したとき、 $\hat{a} \hat{a}^\dagger - \hat{a}^\dagger \hat{a} = 1$ とはならないことに注意しよう。
 
 $$
 \begin{aligned}
@@ -227,6 +227,8 @@ $$
 
 の関係は $n \in \{0, 1, \cdots, N-2\}$ の範囲でしか使えない。
 
+$\ket{N-1}$ に $\hat{a} \hat{a}^\dagger$ を作用させると、
+
 $$
 \begin{aligned}
 \hat{a} \hat{a}^\dagger \ket{N-1} &= 0 \\
@@ -234,23 +236,12 @@ $$
 \end{aligned}
 $$
 
-である。
+となる。
 
-また、
+次に、生成消滅演算子を連続して作用させるとどうなるかを考えてみよう。
 
 $$
 \begin{aligned}
-(\hat{a}^\dagger)^2 &=
-\begin{pmatrix}
-0 & 0 & \cdots & 0 & 0 & 0 \\
-0 & 0 & \cdots & 0 & 0 & 0 \\
-\sqrt{1 \cdot 2} & 0 & \cdots & 0 & 0 & 0 \\
-0 & \sqrt{2 \cdot 3} & \cdots & 0 & 0 & 0 \\
-\vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
-0 & 0 & \cdots & \sqrt{(N-2)(N-1)} & 0 & 0 \\
-\end{pmatrix} \\
-&= \sum_{k=0}^{N-3} \sqrt{(k+1)(k+2)} \ket{k+2} \bra{k}
-\\
 \hat{a}^2 &=
 \begin{pmatrix}
 0 & 0 & \sqrt{1 \cdot 2} & 0 & \cdots & 0 \\
@@ -260,7 +251,18 @@ $$
 0 & 0 & 0 & 0 & \cdots & 0 \\
 0 & 0 & 0 & 0 & \cdots & 0 \\
 \end{pmatrix} \\
-&= \sum_{k=0}^{N-3} \sqrt{(k+1)(k+2)} \ket{k} \bra{k+2}
+&= \sum_{n=0}^{N-3} \sqrt{(n+1)(n+2)} \ket{n} \bra{n+2}
+\\
+(\hat{a}^\dagger)^2 &=
+\begin{pmatrix}
+0 & 0 & \cdots & 0 & 0 & 0 \\
+0 & 0 & \cdots & 0 & 0 & 0 \\
+\sqrt{1 \cdot 2} & 0 & \cdots & 0 & 0 & 0 \\
+0 & \sqrt{2 \cdot 3} & \cdots & 0 & 0 & 0 \\
+\vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+0 & 0 & \cdots & \sqrt{(N-2)(N-1)} & 0 & 0 \\
+\end{pmatrix} \\
+&= \sum_{n=0}^{N-3} \sqrt{(n+1)(n+2)} \ket{n+2} \bra{n}
 \end{aligned}
 $$
 
@@ -277,7 +279,7 @@ $$
 \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
 0 & 0 & 0 & 0 & \cdots & (N-2)(N-1)
 \end{pmatrix} \\
-&= \sum_{k=0}^{N-1} (k-1)k \ket{k} \bra{k}
+&= \sum_{n=0}^{N-1} (n-1)n \ket{n} \bra{n}
 \end{aligned}
 $$
 
@@ -303,4 +305,14 @@ $$
 (\hat{a}^\dagger \hat{a})^2 = \hat{a}^\dagger \hat{a} \hat{a}^\dagger \hat{a}
 $$
 
-は等しくないことに注意しよう。
+は等しくないことに注意が必要である。
+
+また、 $\ket{n}$ に対して消滅演算子 $\hat{a}$ を $n$ 回連続して作用させれば、
+
+$$
+\begin{aligned}
+\hat{a}^{n}\ket{n} = \sqrt{n!} \ket{0}
+\end{aligned}
+$$
+
+となる。

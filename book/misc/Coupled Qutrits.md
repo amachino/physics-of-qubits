@@ -144,7 +144,7 @@ $$
 H &= \begin{pmatrix}
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & \omega_1 & 0 & g & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 2 \omega_1 - \alpha_1 & 0 & \sqrt{2}g & 0 & 0 & 0 & 0 \\
+0 & 0 & 2 \omega_1 + \alpha_1 & 0 & \sqrt{2}g & 0 & 0 & 0 & 0 \\
 0 & g & 0 & \omega_2 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & \sqrt{2}g & 0 & \omega_1 + \omega_2 & 0 & \sqrt{2}g & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 2 \omega_1 + \omega_2 - \alpha_1 & 0 & 2g & 0 \\
