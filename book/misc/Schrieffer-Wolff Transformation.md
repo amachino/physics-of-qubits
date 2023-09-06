@@ -191,9 +191,9 @@ $$
 
 となる。
 
-つまり、 $S$ は $V$ と行列の形状は変わらず、各成分の値を $E_n - E_m$ で割ったものになる。
+つまり、 $S$ は $V$ の各成分の値を $E_n - E_m$ で割ったものになる。
 
-## 例 1
+## 例 1: qubit-qubit
 
 $$
 \begin{aligned}
@@ -268,7 +268,9 @@ H' &= H_0+\frac{1}{2}\left[V, S\right]+O\left(g^3\right) \\
 \end{aligned}
 $$
 
-## 例 2
+$O\left(g^3\right)$ を除いた対角行列は、 $H$ を厳密に対角化した後に、 $\frac{g^2}{\Delta^2} \ll 1$ として近似したものと一致する。
+
+## 例 2: qutrit-qutrit
 
 $$
 \begin{aligned}
@@ -306,12 +308,12 @@ $$
 S &= \begin{pmatrix}
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & \frac{g}{\Delta} & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & \frac{\sqrt{2}g}{\Delta} & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & \frac{\sqrt{2}g}{\Delta - \alpha_1} & 0 & 0 & 0 & 0 \\
 0 & -\frac{g}{\Delta} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & -\frac{\sqrt{2}g}{\Delta} & 0 & 0 & 0 & \frac{\sqrt{2}g}{\Delta} & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{2g}{\Delta} & 0 \\
-0 & 0 & 0 & 0 & -\frac{\sqrt{2}g}{\Delta} & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & -\frac{2g}{\Delta} & 0 & 0 & 0 \\
+0 & 0 & -\frac{\sqrt{2}g}{\Delta - \alpha_1} & 0 & 0 & 0 & \frac{\sqrt{2}g}{\Delta + \alpha_2} & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{2g}{\Delta - \alpha_1 + \alpha_2} & 0 \\
+0 & 0 & 0 & 0 & -\frac{\sqrt{2}g}{\Delta + \alpha_2} & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & -\frac{2g}{\Delta - \alpha_1 + \alpha_2} & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 \end{pmatrix} \\
 \end{aligned}
@@ -321,16 +323,15 @@ $$
 
 $$
 \begin{aligned}
-\left[ V, S \right]
-&= \begin{pmatrix}
+\left[ V, S \right] &= \begin{pmatrix}
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & -\frac{2g^2}{\Delta} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & -\frac{4g^2}{\Delta} & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & -\frac{4g^2}{\Delta - \alpha_1} & 0 & 0 & 0 & \frac{2g^2}{\Delta + \alpha_2} - \frac{2g^2}{\Delta - \alpha_1} & 0 & 0 \\
 0 & 0 & 0 & \frac{2g^2}{\Delta} & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & -\frac{8g^2}{\Delta} & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & \frac{4g^2}{\Delta} & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{8g^2}{\Delta} & 0 \\
+0 & 0 & 0 & 0 & -\frac{4g^2}{\Delta + \alpha_2} + \frac{4g^2}{\Delta - \alpha_1} & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & -\frac{8g^2}{\Delta - \alpha_1 + \alpha_2} & 0 & 0 & 0 \\
+0 & 0 & \frac{2g^2}{\Delta + \alpha_2} - \frac{2g^2}{\Delta - \alpha_1} & 0 & 0 & 0 & \frac{4g^2}{\Delta + \alpha_2} & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{8g^2}{\Delta - \alpha_1 + \alpha_2} & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 \end{pmatrix}
 \end{aligned}
@@ -357,30 +358,26 @@ H' &= H_0+\frac{1}{2}\left[V, S\right]+O\left(g^3\right) \\
 \begin{pmatrix}
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & -\frac{g^2}{\Delta} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & -\frac{2g^2}{\Delta} & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & -\frac{2g^2}{\Delta - \alpha_1} & 0 & 0 & 0 & \frac{g^2}{\Delta + \alpha_2} - \frac{g^2}{\Delta - \alpha_1} & 0 & 0 \\
 0 & 0 & 0 & \frac{g^2}{\Delta} & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & -\frac{4g^2}{\Delta} & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & \frac{2g^2}{\Delta} & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{4g^2}{\Delta} & 0 \\
+0 & 0 & 0 & 0 & -\frac{2g^2}{\Delta + \alpha_2} + \frac{2g^2}{\Delta - \alpha_1} & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & -\frac{4g^2}{\Delta - \alpha_1 + \alpha_2} & 0 & 0 & 0 \\
+0 & 0 & \frac{g^2}{\Delta + \alpha_2} - \frac{g^2}{\Delta - \alpha_1} & 0 & 0 & 0 & \frac{2g^2}{\Delta + \alpha_2} & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{4g^2}{\Delta - \alpha_1 + \alpha_2} & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 \end{pmatrix} \\
 &+ O\left(g^3\right) \\
 &= \begin{pmatrix}
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & \omega_1 - \frac{g^2}{\Delta} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 2 \omega_1 + \alpha_1 - \frac{2g^2}{\Delta} & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 2 \omega_1 + \alpha_1 - \frac{2g^2}{\Delta - \alpha_1} & 0 & 0 & 0 & \frac{g^2}{\Delta + \alpha_2} - \frac{g^2}{\Delta - \alpha_1} & 0 & 0 \\
 0 & 0 & 0 & \omega_2 + \frac{g^2}{\Delta} & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & \omega_1 + \omega_2 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 2 \omega_1 + \omega_2 + \alpha_1 - \frac{4g^2}{\Delta} & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 2 \omega_2 + \alpha_2 + \frac{2g^2}{\Delta} & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & \omega_1 + 2 \omega_2 + \alpha_2 + \frac{4g^2}{\Delta} & 0 \\
+0 & 0 & 0 & 0 & \omega_1 + \omega_2 - \frac{2g^2}{\Delta + \alpha_2} + \frac{2g^2}{\Delta - \alpha_1} & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 2 \omega_1 + \omega_2 + \alpha_1 - \frac{4g^2}{\Delta - \alpha_1 + \alpha_2} & 0 & 0 & 0 \\
+0 & 0 & \frac{g^2}{\Delta + \alpha_2} - \frac{g^2}{\Delta - \alpha_1} & 0 & 0 & 0 & 2 \omega_2 + \alpha_2 + \frac{2g^2}{\Delta + \alpha_2} & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & \omega_1 + 2 \omega_2 + \alpha_2 + \frac{4g^2}{\Delta - \alpha_1 + \alpha_2} & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 2 \omega_1 + 2 \omega_2 + \alpha_1 + \alpha_2 \\
 \end{pmatrix} \\
 &+ O\left(g^3\right)
 \end{aligned}
 $$
-
----
-
-$O\left(g^3\right)$ を除いた対角行列は、 $H$ を厳密に対角化した後に、 $\frac{g^2}{\Delta^2} \ll 1$ として近似したものと一致する。
