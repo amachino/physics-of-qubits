@@ -420,7 +420,7 @@ $$
 ただし、
 
 $$
-\xi = \frac{g^2(\alpha_1 + \alpha_2)}{(\Delta - \alpha_1)(\Delta + \alpha_2)}
+\xi = \frac{g^2(\alpha_1 + \alpha_2)}{(\Delta + \alpha_1)(\Delta - \alpha_2)}
 $$
 
 である。
