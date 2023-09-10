@@ -399,7 +399,7 @@ $$
 
 $$
 \begin{aligned}
-H' &= c_{II} \cdot I \otimes I + c_{ZI} \cdot Z \otimes I + c_{IZ} \cdot I \otimes Z + c_{ZZ} \cdot Z \otimes Z
+H' &= c_{II} \cdot I \otimes I + c_{IZ} \cdot I \otimes Z + c_{ZI} \cdot Z \otimes I + c_{ZZ} \cdot Z \otimes Z
 \end{aligned}
 $$
 

@@ -73,13 +73,13 @@ H &= H_1 \otimes I_2
 + H_{\mathrm{int}} \\
 &= \begin{pmatrix}
 E_1^{(0)} + E_2^{(0)} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & E_1^{(1)} + E_2^{(0)} & 0 & g & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & E_1^{(2)} + E_2^{(0)} & 0 & \sqrt{2}g & 0 & 0 & 0 & 0 \\
-0 & g & 0 & E_1^{(0)} + E_2^{(1)} & 0 & 0 & 0 & 0 & 0 \\
+0 & E_1^{(0)} + E_2^{(1)} & 0 & g & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & E_1^{(0)} + E_2^{(2)} & 0 & \sqrt{2}g & 0 & 0 & 0 & 0 \\
+0 & g & 0 & E_1^{(1)} + E_2^{(0)} & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & \sqrt{2}g & 0 & E_1^{(1)} + E_2^{(1)} & 0 & \sqrt{2}g & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & E_1^{(2)} + E_2^{(1)} & 0 & 2g & 0 \\
-0 & 0 & 0 & 0 & \sqrt{2}g & 0 & E_1^{(0)} + E_2^{(2)} & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 2g & 0 & E_1^{(1)} + E_2^{(2)} & 0 \\
+0 & 0 & 0 & 0 & 0 & E_1^{(1)} + E_2^{(2)} & 0 & 2g & 0 \\
+0 & 0 & 0 & 0 & \sqrt{2}g & 0 & E_1^{(2)} + E_2^{(0)} & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 2g & 0 & E_1^{(2)} + E_2^{(1)} & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & E_1^{(2)} + E_2^{(2)} \\
 \end{pmatrix}
 
@@ -95,13 +95,13 @@ $$
 \begin{aligned}
 H &= \begin{pmatrix}
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & \omega_1 & 0 & g & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 2 \omega_1 & 0 & \sqrt{2}g & 0 & 0 & 0 & 0 \\
-0 & g & 0 & \omega_2 & 0 & 0 & 0 & 0 & 0 \\
+0 & \omega_2 & 0 & g & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 2 \omega_2 & 0 & \sqrt{2}g & 0 & 0 & 0 & 0 \\
+0 & g & 0 & \omega_1 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & \sqrt{2}g & 0 & \omega_1 + \omega_2 & 0 & \sqrt{2}g & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 2 \omega_1 + \omega_2 & 0 & 2g & 0 \\
-0 & 0 & 0 & 0 & \sqrt{2}g & 0 & 2 \omega_2 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 2g & 0 & \omega_1 + 2 \omega_2 & 0 \\
+0 & 0 & 0 & 0 & 0 & \omega_1 + 2 \omega_2 & 0 & 2g & 0 \\
+0 & 0 & 0 & 0 & \sqrt{2}g & 0 & 2 \omega_1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 2g & 0 & 2 \omega_1 + \omega_2 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 2 \omega_1 + 2 \omega_2 \\
 \end{pmatrix} \\
 \end{aligned}
@@ -114,13 +114,13 @@ $$
 $$
 \begin{aligned}
 \lambda_1 &= 0 \\
-\lambda_2 &= \omega_1 - \frac{g^2}{\Delta} \\
-\lambda_3 &= 2 \omega_1 - \frac{2g^2}{\Delta} \\
-\lambda_4 &= \omega_2 + \frac{g^2}{\Delta} \\
+\lambda_2 &= \omega_2 - \frac{g^2}{\Delta} \\
+\lambda_3 &= 2 \omega_2 - \frac{2g^2}{\Delta} \\
+\lambda_4 &= \omega_1 + \frac{g^2}{\Delta} \\
 \lambda_5 &= \omega_1 + \omega_2 \\
-\lambda_6 &= 2 \omega_1 + \omega_2 - \frac{4g^2}{\Delta} \\
-\lambda_7 &= 2 \omega_2 + \frac{2g^2}{\Delta} \\
-\lambda_8 &= \omega_1 + 2 \omega_2 + \frac{4g^2}{\Delta} \\
+\lambda_6 &= \omega_1 + 2 \omega_2 - \frac{4g^2}{\Delta} \\
+\lambda_7 &= 2 \omega_1 + \frac{2g^2}{\Delta} \\
+\lambda_8 &= 2 \omega_1 + \omega_2 + \frac{4g^2}{\Delta} \\
 \lambda_9 &= 2 \omega_1 + 2 \omega_2 \\
 \end{aligned}
 $$
@@ -143,14 +143,14 @@ $$
 \begin{aligned}
 H &= \begin{pmatrix}
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & \omega_1 & 0 & g & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 2 \omega_1 + \alpha_1 & 0 & \sqrt{2}g & 0 & 0 & 0 & 0 \\
-0 & g & 0 & \omega_2 & 0 & 0 & 0 & 0 & 0 \\
+0 & \omega_2 & 0 & g & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 2 \omega_2 + \alpha_2 & 0 & \sqrt{2}g & 0 & 0 & 0 & 0 \\
+0 & g & 0 & \omega_1 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & \sqrt{2}g & 0 & \omega_1 + \omega_2 & 0 & \sqrt{2}g & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 2 \omega_1 + \omega_2 - \alpha_1 & 0 & 2g & 0 \\
-0 & 0 & 0 & 0 & \sqrt{2}g & 0 & 2 \omega_2 - \alpha_2 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 2g & 0 & \omega_1 + 2 \omega_2 - \alpha_2 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 2 \omega_1 + 2 \omega_2 - \alpha_1 - \alpha_2 \\
+0 & 0 & 0 & 0 & 0 & \omega_1 + 2 \omega_2 + \alpha_2 & 0 & 2g & 0 \\
+0 & 0 & 0 & 0 & \sqrt{2}g & 0 & 2 \omega_1 + \alpha_1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 2g & 0 & 2 \omega_1 + \omega_2 + \alpha_1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 2 \omega_1 + 2 \omega_2 + \alpha_1 + \alpha_2 \\
 \end{pmatrix} \\
 \end{aligned}
 $$
