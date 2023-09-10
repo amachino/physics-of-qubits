@@ -200,8 +200,8 @@ $$
 H_0 &=
 \begin{pmatrix}
 0 & 0 & 0 & 0 \\
-0 & \omega_1 & g & 0 \\
-0 & g & \omega_2 & 0 \\
+0 & \omega_2 & g & 0 \\
+0 & g & \omega_1 & 0 \\
 0 & 0 & 0 & \omega_1 + \omega_2 \\
 \end{pmatrix} \\
 
@@ -214,7 +214,7 @@ V &= \begin{pmatrix}
 \end{aligned}
 $$
 
-であれば、 $\Delta = \omega_2 - \omega_1$ として、
+であれば、 $\Delta = \omega_1 - \omega_2$ として、
 
 $$
 \begin{aligned}
@@ -249,8 +249,8 @@ H' &= H_0+\frac{1}{2}\left[V, S\right]+O\left(g^3\right) \\
 &=
 \begin{pmatrix}
 0 & 0 & 0 & 0 \\
-0 & \omega_1 & g & 0 \\
-0 & g & \omega_2 & 0 \\
+0 & \omega_2 & g & 0 \\
+0 & g & \omega_1 & 0 \\
 0 & 0 & 0 & \omega_1 + \omega_2 \\
 \end{pmatrix} +
 \begin{pmatrix}
@@ -261,8 +261,8 @@ H' &= H_0+\frac{1}{2}\left[V, S\right]+O\left(g^3\right) \\
 \end{pmatrix} + O\left(g^3\right) \\
 &= \begin{pmatrix}
 0 & 0 & 0 & 0 \\
-0 & \omega_1 - \frac{g^2}{\Delta} & 0 & 0 \\
-0 & 0 & \omega_2 + \frac{g^2}{\Delta} & 0 \\
+0 & \omega_2 - \frac{g^2}{\Delta} & 0 & 0 \\
+0 & 0 & \omega_1 + \frac{g^2}{\Delta} & 0 \\
 0 & 0 & 0 & \omega_1 + \omega_2 \\
 \end{pmatrix} + O\left(g^3\right)
 \end{aligned}
@@ -277,13 +277,13 @@ $$
 H_0 &=
 \begin{pmatrix}
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & \omega_1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 2 \omega_1 + \alpha_1 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & \omega_2 & 0 & 0 & 0 & 0 & 0 \\
+0 & \omega_2 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 2 \omega_2 + \alpha_2 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & \omega_1 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & \omega_1 + \omega_2 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 2 \omega_1 + \omega_2 + \alpha_1 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 2 \omega_2 + \alpha_2 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & \omega_1 + 2 \omega_2 + \alpha_2 & 0 \\
+0 & 0 & 0 & 0 & 0 & \omega_1 + 2 \omega_2 + \alpha_2 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 2 \omega_1 + \alpha_1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 2 \omega_1 + \alpha_1 + \omega_2 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 2 \omega_1 + 2 \omega_2 + \alpha_1 + \alpha_2 \\
 \end{pmatrix} \\
 
@@ -301,19 +301,19 @@ V &= \begin{pmatrix}
 \end{aligned}
 $$
 
-であれば、 $\Delta = \omega_2 - \omega_1$ として、
+であれば、 $\Delta = \omega_1 - \omega_2$ として、
 
 $$
 \begin{aligned}
 S &= \begin{pmatrix}
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & \frac{g}{\Delta} & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & \frac{\sqrt{2}g}{\Delta - \alpha_1} & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & \frac{\sqrt{2}g}{\Delta - \alpha_2} & 0 & 0 & 0 & 0 \\
 0 & -\frac{g}{\Delta} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & -\frac{\sqrt{2}g}{\Delta - \alpha_1} & 0 & 0 & 0 & \frac{\sqrt{2}g}{\Delta + \alpha_2} & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{2g}{\Delta - \alpha_1 + \alpha_2} & 0 \\
-0 & 0 & 0 & 0 & -\frac{\sqrt{2}g}{\Delta + \alpha_2} & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & -\frac{2g}{\Delta - \alpha_1 + \alpha_2} & 0 & 0 & 0 \\
+0 & 0 & -\frac{\sqrt{2}g}{\Delta - \alpha_2} & 0 & 0 & 0 & \frac{\sqrt{2}g}{\Delta + \alpha_1} & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{2g}{\Delta + \alpha_1 - \alpha_2} & 0 \\
+0 & 0 & 0 & 0 & -\frac{\sqrt{2}g}{\Delta + \alpha_1} & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & -\frac{2g}{\Delta + \alpha_1 - \alpha_2} & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 \end{pmatrix} \\
 \end{aligned}
@@ -326,12 +326,12 @@ $$
 \left[ V, S \right] &= \begin{pmatrix}
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & -\frac{2g^2}{\Delta} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & -\frac{4g^2}{\Delta - \alpha_1} & 0 & 0 & 0 & \frac{2g^2}{\Delta + \alpha_2} - \frac{2g^2}{\Delta - \alpha_1} & 0 & 0 \\
+0 & 0 & -\frac{4g^2}{\Delta - \alpha_2} & 0 & 0 & 0 & \frac{2g^2}{\Delta + \alpha_1} - \frac{2g^2}{\Delta - \alpha_2} & 0 & 0 \\
 0 & 0 & 0 & \frac{2g^2}{\Delta} & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & -\frac{4g^2}{\Delta + \alpha_2} + \frac{4g^2}{\Delta - \alpha_1} & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & -\frac{8g^2}{\Delta - \alpha_1 + \alpha_2} & 0 & 0 & 0 \\
-0 & 0 & \frac{2g^2}{\Delta + \alpha_2} - \frac{2g^2}{\Delta - \alpha_1} & 0 & 0 & 0 & \frac{4g^2}{\Delta + \alpha_2} & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{8g^2}{\Delta - \alpha_1 + \alpha_2} & 0 \\
+0 & 0 & 0 & 0 & -\frac{4g^2}{\Delta + \alpha_1} + \frac{4g^2}{\Delta - \alpha_2} & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & -\frac{8g^2}{\Delta + \alpha_1 - \alpha_2} & 0 & 0 & 0 \\
+0 & 0 & \frac{2g^2}{\Delta + \alpha_1} - \frac{2g^2}{\Delta - \alpha_2} & 0 & 0 & 0 & \frac{4g^2}{\Delta + \alpha_1} & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{8g^2}{\Delta + \alpha_1 - \alpha_2} & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 \end{pmatrix}
 \end{aligned}
@@ -345,37 +345,37 @@ H' &= H_0+\frac{1}{2}\left[V, S\right]+O\left(g^3\right) \\
 &=
 \begin{pmatrix}
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & \omega_1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 2 \omega_1 + \alpha_1 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & \omega_2 & 0 & 0 & 0 & 0 & 0 \\
+0 & \omega_2 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 2 \omega_2 + \alpha_2 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & \omega_1 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & \omega_1 + \omega_2 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 2 \omega_1 + \omega_2 + \alpha_1 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 2 \omega_2 + \alpha_2 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & \omega_1 + 2 \omega_2 + \alpha_2 & 0 \\
+0 & 0 & 0 & 0 & 0 & \omega_1 + 2 \omega_2 + \alpha_2 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 2 \omega_1 + \alpha_1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 2 \omega_1 + \alpha_1 + \omega_2& 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 2 \omega_1 + 2 \omega_2 + \alpha_1 + \alpha_2 \\
 \end{pmatrix} \\
 &+
 \begin{pmatrix}
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & -\frac{g^2}{\Delta} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & -\frac{2g^2}{\Delta - \alpha_1} & 0 & 0 & 0 & \frac{g^2}{\Delta + \alpha_2} - \frac{g^2}{\Delta - \alpha_1} & 0 & 0 \\
+0 & 0 & -\frac{2g^2}{\Delta - \alpha_2} & 0 & 0 & 0 & \frac{g^2}{\Delta + \alpha_1} - \frac{g^2}{\Delta - \alpha_2} & 0 & 0 \\
 0 & 0 & 0 & \frac{g^2}{\Delta} & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & -\frac{2g^2}{\Delta + \alpha_2} + \frac{2g^2}{\Delta - \alpha_1} & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & -\frac{4g^2}{\Delta - \alpha_1 + \alpha_2} & 0 & 0 & 0 \\
-0 & 0 & \frac{g^2}{\Delta + \alpha_2} - \frac{g^2}{\Delta - \alpha_1} & 0 & 0 & 0 & \frac{2g^2}{\Delta + \alpha_2} & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{4g^2}{\Delta - \alpha_1 + \alpha_2} & 0 \\
+0 & 0 & 0 & 0 & -\frac{2g^2}{\Delta + \alpha_1} + \frac{2g^2}{\Delta - \alpha_2} & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & -\frac{4g^2}{\Delta + \alpha_1 - \alpha_2} & 0 & 0 & 0 \\
+0 & 0 & \frac{g^2}{\Delta + \alpha_1} - \frac{g^2}{\Delta - \alpha_2} & 0 & 0 & 0 & \frac{2g^2}{\Delta + \alpha_1} & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{4g^2}{\Delta + \alpha_1 - \alpha_2} & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 \end{pmatrix} \\
 &+ O\left(g^3\right) \\
 &= \begin{pmatrix}
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & \omega_1 - \frac{g^2}{\Delta} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 2 \omega_1 + \alpha_1 - \frac{2g^2}{\Delta - \alpha_1} & 0 & 0 & 0 & \frac{g^2}{\Delta + \alpha_2} - \frac{g^2}{\Delta - \alpha_1} & 0 & 0 \\
-0 & 0 & 0 & \omega_2 + \frac{g^2}{\Delta} & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & \omega_1 + \omega_2 - \frac{2g^2}{\Delta + \alpha_2} + \frac{2g^2}{\Delta - \alpha_1} & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 2 \omega_1 + \omega_2 + \alpha_1 - \frac{4g^2}{\Delta - \alpha_1 + \alpha_2} & 0 & 0 & 0 \\
-0 & 0 & \frac{g^2}{\Delta + \alpha_2} - \frac{g^2}{\Delta - \alpha_1} & 0 & 0 & 0 & 2 \omega_2 + \alpha_2 + \frac{2g^2}{\Delta + \alpha_2} & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & \omega_1 + 2 \omega_2 + \alpha_2 + \frac{4g^2}{\Delta - \alpha_1 + \alpha_2} & 0 \\
+0 & \omega_2 - \frac{g^2}{\Delta} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 2 \omega_2 + \alpha_2 - \frac{2g^2}{\Delta - \alpha_2} & 0 & 0 & 0 & \frac{g^2}{\Delta + \alpha_1} - \frac{g^2}{\Delta - \alpha_2} & 0 & 0 \\
+0 & 0 & 0 & \omega_1 + \frac{g^2}{\Delta} & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & \omega_1 + \omega_2 - \frac{2g^2}{\Delta + \alpha_1} + \frac{2g^2}{\Delta - \alpha_2} & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & \omega_1 + 2 \omega_2 + \alpha_2 - \frac{4g^2}{\Delta + \alpha_1 - \alpha_2} & 0 & 0 & 0 \\
+0 & 0 & \frac{g^2}{\Delta + \alpha_1} - \frac{g^2}{\Delta - \alpha_2} & 0 & 0 & 0 & 2 \omega_1 + \alpha_1 + \frac{2g^2}{\Delta + \alpha_1} & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 2 \omega_1 + \alpha_1 + \omega_2 + \frac{4g^2}{\Delta + \alpha_1 - \alpha_2} & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 2 \omega_1 + 2 \omega_2 + \alpha_1 + \alpha_2 \\
 \end{pmatrix} \\
 &+ O\left(g^3\right)
@@ -388,9 +388,9 @@ $$
 \begin{aligned}
 H' &= \begin{pmatrix}
 0 & 0 & 0 & 0 \\
-0 & \omega_1 - \frac{g^2}{\Delta} & 0 & 0 \\
-0 & 0 & \omega_2 + \frac{g^2}{\Delta} & 0 \\
-0 & 0 & 0 & \omega_1 + \omega_2 + \frac{2g^2(\alpha_1 + \alpha_2)}{(\Delta - \alpha_1)(\Delta + \alpha_2)}
+0 & \omega_2 - \frac{g^2}{\Delta} & 0 & 0 \\
+0 & 0 & \omega_1 + \frac{g^2}{\Delta} & 0 \\
+0 & 0 & 0 & \omega_1 + \omega_2 + \frac{2g^2(\alpha_1 + \alpha_2)}{(\Delta + \alpha_1)(\Delta - \alpha_2)}
 \end{pmatrix} \\
 \end{aligned}
 $$
@@ -403,16 +403,16 @@ H' &= c_{II} \cdot I \otimes I + c_{ZI} \cdot Z \otimes I + c_{IZ} \cdot I \otim
 \end{aligned}
 $$
 
-のように ${I, X, Y, Z}$ のテンソル積で展開すると、
+のように ${II, IZ, ZI, ZZ}$ で展開すると、
 
 $$
 \begin{aligned}
 c_{II} &= 
 \frac{1}{2} \left( \omega_1 + \omega_2 + \xi \right) \\
-c_{ZI} &=
--\frac{1}{2} \left( \omega_2 + \frac{g^2}{\Delta} + \xi \right) \\
 c_{IZ} &=
-- \frac{1}{2} \left( \omega_1 - \frac{g^2}{\Delta} + \xi \right) \\
+-\frac{1}{2} \left( \omega_2 - \frac{g^2}{\Delta} + \xi \right) \\
+c_{ZI} &=
+- \frac{1}{2} \left( \omega_1 + \frac{g^2}{\Delta} + \xi \right) \\
 c_{ZZ} &= \frac{1}{2} \xi
 \end{aligned}
 $$
