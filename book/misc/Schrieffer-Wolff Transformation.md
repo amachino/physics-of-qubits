@@ -381,3 +381,46 @@ H' &= H_0+\frac{1}{2}\left[V, S\right]+O\left(g^3\right) \\
 &+ O\left(g^3\right)
 \end{aligned}
 $$
+
+この行列から、高次準位を取り除いた $H'$ は、
+
+$$
+\begin{aligned}
+H' &= \begin{pmatrix}
+0 & 0 & 0 & 0 \\
+0 & \omega_1 - \frac{g^2}{\Delta} & 0 & 0 \\
+0 & 0 & \omega_2 + \frac{g^2}{\Delta} & 0 \\
+0 & 0 & 0 & \omega_1 + \omega_2 + \frac{2g^2(\alpha_1 + \alpha_2)}{(\Delta - \alpha_1)(\Delta + \alpha_2)}
+\end{pmatrix} \\
+\end{aligned}
+$$
+
+であり、 $H'$ を
+
+$$
+\begin{aligned}
+H' &= c_{II} \cdot I \otimes I + c_{ZI} \cdot Z \otimes I + c_{IZ} \cdot I \otimes Z + c_{ZZ} \cdot Z \otimes Z
+\end{aligned}
+$$
+
+のように ${I, X, Y, Z}$ のテンソル積で展開すると、
+
+$$
+\begin{aligned}
+c_{II} &= 
+\frac{1}{2} \left( \omega_1 + \omega_2 + \xi \right) \\
+c_{ZI} &=
+-\frac{1}{2} \left( \omega_2 + \frac{g^2}{\Delta} + \xi \right) \\
+c_{IZ} &=
+- \frac{1}{2} \left( \omega_1 - \frac{g^2}{\Delta} + \xi \right) \\
+c_{ZZ} &= \frac{1}{2} \xi
+\end{aligned}
+$$
+
+ただし、
+
+$$
+\xi = \frac{g^2(\alpha_1 + \alpha_2)}{(\Delta - \alpha_1)(\Delta + \alpha_2)}
+$$
+
+である。
