@@ -403,7 +403,7 @@ H' &= c_{II} \cdot I \otimes I + c_{IZ} \cdot I \otimes Z + c_{ZI} \cdot Z \otim
 \end{aligned}
 $$
 
-のように ${II, IZ, ZI, ZZ}$ で展開すると、
+のように $\{II, IZ, ZI, ZZ\}$ で展開すると、
 
 $$
 \begin{aligned}
