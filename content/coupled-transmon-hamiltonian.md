@@ -155,7 +155,6 @@ U^\dagger V U
 + b_1^\dagger b_2 e^{i (\omega_1 - \omega_2) t}
 + b_1 b_2^\dagger e^{-i (\omega_1 - \omega_2) t}
 + b_1 b_2 e^{-i (\omega_1 + \omega_2) t} \right)
-
 \end{aligned}
 $$
 

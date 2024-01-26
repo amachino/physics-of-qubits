@@ -4,4 +4,15 @@
 format: jb-book
 root: content/intro
 chapters:
-  - glob: content/misc/**
+  - file: content/ladder-operators.md
+  - file: content/transmon-hamiltonian.md
+  - file: content/basis-transformation.md
+  - file: content/coupled-transmon-hamiltonian.md
+  - file: content/schrieffer-wolff-transformation.md
+  - file: content/coupled-system/coupled-two-quantum-system.md
+    sections:
+      - file: content/coupled-system/coupled-qubits.md
+      - file: content/coupled-system/coupled-qutrits.md
+  - file: content/ipynb/index.md
+    sections:
+      - glob: content/ipynb/*

@@ -137,7 +137,6 @@ H' &= e^{-S} H e^{S} \\
 &= e^{-S} \left(H_0 + V \right) e^{S} \\
 &= H_0 + V + [H_0, S] + [V, S] + \frac{1}{2} [[H_0, S], S] + \frac{1}{2} [[V, S], S] + \cdots \\
 &= H_0+\underbrace{V+\left[H_0, S\right]}_{O(g)}+\underbrace{[V, S]+\frac{1}{2}\left[\left[H_0, S\right], S\right]}_{O\left(g^2\right)}+O\left(g^3\right)
-
 \end{aligned}
 $$
 
@@ -211,7 +210,6 @@ H_0 &=
 0 & g & \omega_1 & 0 \\
 0 & 0 & 0 & \omega_1 + \omega_2 \\
 \end{pmatrix} \\
-
 V &= \begin{pmatrix}
 0 & 0 & 0 & 0 \\
 0 & 0 & g & 0 \\
@@ -293,7 +291,6 @@ H_0 &=
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 2 \omega_1 + \alpha_1 + \omega_2 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 2 \omega_1 + 2 \omega_2 + \alpha_1 + \alpha_2 \\
 \end{pmatrix} \\
-
 V &= \begin{pmatrix}
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & g & 0 & 0 & 0 & 0 & 0 \\
