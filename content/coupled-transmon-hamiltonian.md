@@ -252,7 +252,7 @@ $$
 
 $$
 \begin{aligned}
-\ket{\psi}''_2 &= \sum_{n} c_{n} \ket{n}''_2
+\ket{\psi}_2 &= \sum_{n} c_{n} \ket{n}''_2
 \\
 &= \sum_{n} c_{n} e^{i n (\omega_1 - \omega_2) t} \ket{n}_2'
 \end{aligned}
