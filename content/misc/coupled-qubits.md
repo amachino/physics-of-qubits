@@ -5,7 +5,7 @@ authors:
   - name: Akinori Machino
 ---
 
-## 2 準位系の場合
+# 2 準位系の場合
 
 $M=N=2$ の場合を考える。このとき、$H_1$ と $H_2$ は
 

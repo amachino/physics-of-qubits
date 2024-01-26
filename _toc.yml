@@ -2,13 +2,6 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: book/intro
+root: content/intro
 chapters:
-  - file: book/chapter1/intro1
-    sections:
-      - file: book/chapter1/section1-1
-      - file: book/chapter1/section1-2
-  - file: book/chapter2/intro2
-    sections:
-      - file: book/chapter2/section2-1
-      - file: book/chapter2/section2-2
+  - glob: content/misc/**
