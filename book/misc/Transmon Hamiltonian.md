@@ -1,3 +1,10 @@
+---
+title: Transmon Hamiltonian
+date: 2023-09-04
+authors:
+  - name: Akinori Machino
+---
+
 ## トランズモンのハミルトニアン
 
 超伝導電荷量子ビットのハミルトニアンは、生成消滅演算子 $b, b^\dagger$ を用いて、

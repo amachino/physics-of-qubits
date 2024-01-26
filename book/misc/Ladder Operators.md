@@ -1,3 +1,10 @@
+---
+title: Ladder Operators
+date: 2023-09-04
+authors:
+  - name: Akinori Machino
+---
+
 # 有限次元での生成消滅演算子の行列表現
 
 $N$ 個の状態ベクトル

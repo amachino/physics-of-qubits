@@ -1,3 +1,10 @@
+---
+title: Coupled Transmon Hamiltonian
+date: 2023-09-13
+authors:
+  - name: Akinori Machino
+---
+
 自由ハミルトニアンが $H_1, H_2$ で表わされる2つのトランズモンが結合定数 $g$ で相互作用するときのハミルトニアンは、
 
 $$

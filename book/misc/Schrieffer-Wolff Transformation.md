@@ -1,3 +1,10 @@
+---
+title: Schrieffer-Wolff Transformation
+date: 2023-09-13
+authors:
+  - name: Akinori Machino
+---
+
 # Schrieffer-Wolff 変換
 
 2 つの量子系 $H_1, H_2$ が微小な結合定数 $g$ で結合している状況を考えよう。

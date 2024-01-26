@@ -1,3 +1,10 @@
+---
+title: Coupled Two Quantum System
+date: 2023-09-04
+authors:
+  - name: Akinori Machino
+---
+
 # 結合 2 量子系
 
 ## ハミルトニアン

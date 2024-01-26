@@ -1,3 +1,10 @@
+---
+title: Basis Transformation
+date: 2023-09-28
+authors:
+  - name: Akinori Machino
+---
+
 ## シュレーディンガー表示とハイゼンベルク表示
 
 状態ベクトル

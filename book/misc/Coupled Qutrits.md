@@ -1,3 +1,10 @@
+---
+title: Coupled Qutrits
+date: 2023-09-04
+authors:
+  - name: Akinori Machino
+---
+
 ## 3 準位系の場合
 
 $M=N=3$ の場合を考える。このとき、$H_1$ と $H_2$ は
