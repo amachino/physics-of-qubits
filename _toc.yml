@@ -2,17 +2,19 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: content/intro
+root: src/intro
+options: # The options key will be applied to all chapters, but not sub-sections
+  numbered: True
 chapters:
-  - file: content/ladder-operators.md
-  - file: content/transmon-hamiltonian.md
-  - file: content/basis-transformation.md
-  - file: content/coupled-transmon-hamiltonian.md
-  - file: content/schrieffer-wolff-transformation.md
-  - file: content/coupled-system/coupled-two-quantum-system.md
+  - file: src/ladder-operators.md
+  - file: src/transmon-hamiltonian.md
+  - file: src/basis-transformation.md
+  - file: src/coupled-transmon-hamiltonian.md
+  - file: src/schrieffer-wolff-transformation.md
+  - file: src/coupled-system/coupled-two-quantum-system.md
     sections:
-      - file: content/coupled-system/coupled-qubits.md
-      - file: content/coupled-system/coupled-qutrits.md
-  - file: content/ipynb/index.md
+      - file: src/coupled-system/coupled-qubits.md
+      - file: src/coupled-system/coupled-qutrits.md
+  - file: src/ipynb/index.md
     sections:
-      - glob: content/ipynb/*
+      - glob: src/ipynb/*

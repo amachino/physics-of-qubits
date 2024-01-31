@@ -2,8 +2,11 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: 量子ビットの物理
-author: amachino
+author: "@amachino"
 # logo: logo.png
+
+exclude_patterns:
+  - "**/WIP-*"
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -11,9 +14,9 @@ execute:
   execute_notebooks: off
 
 # Define the name of the latex output file for PDF builds
-latex:
-  latex_documents:
-    targetname: book.tex
+# latex:
+#   latex_documents:
+#     targetname: book.tex
 
 # Add a bibtex file so that we can create citations
 # bibtex_bibfiles:
