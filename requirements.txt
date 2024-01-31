@@ -1,5 +1,5 @@
 jupyter-book
-matplotlib
-numpy
-scipy
-qctrl-visualizer
+# matplotlib
+# numpy
+# scipy
+# qctrl-visualizer
