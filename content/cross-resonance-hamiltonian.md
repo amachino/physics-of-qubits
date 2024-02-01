@@ -109,12 +109,13 @@ $$
 
 $$
 \begin{aligned}
-\frac{1}{2} \left[ H_\mathrm{int}, S \right] &= -\frac{g^2}{ 2\Delta} \left[ b_1^\dagger b_2 + b_1 b_2^\dagger, b_1^\dagger b_2 - b_1 b_2^\dagger \right]
+\frac{1}{2} \left[ H_\mathrm{int}, S \right] &= -\frac{g^2}{2\Delta} \left[ b_1^\dagger b_2 + b_1 b_2^\dagger, b_1^\dagger b_2 - b_1 b_2^\dagger \right]
 \\
-&= -\frac{g^2}{ 2\Delta} \left( b_1^\dagger b_2 + b_1 b_2^\dagger \right) \left( b_1^\dagger b_2 - b_1 b_2^\dagger \right) - \left( b_1^\dagger b_2 - b_1 b_2^\dagger \right) \left( b_1^\dagger b_2 + b_1 b_2^\dagger \right)
+&= \frac{g^2}{2\Delta} \left(
+\left[ b_1^\dagger b_2, b_1 b_2^\dagger \right] - \left[ b_1 b_2^\dagger, b_1^\dagger b_2 \right]
+\right)
 \\
-&= -\frac{g^2}{ 2\Delta} \left( b_1^\dagger b_1^\dagger b_2 b_2 - b_1^\dagger b_1 b_2 b_2^\dagger + b_1 b_1^\dagger b_2^\dagger b_2 - b_1 b_1 b_2^\dagger b_2^\dagger
-- b_1^\dagger b_1^\dagger b_2 b_2 - b_1^\dagger b_1 b_2 b_2^\dagger + b_1 b_1^\dagger b_2^\dagger b_2 + b_1 b_1 b_2^\dagger b_2^\dagger \right)
+&= \frac{g^2}{\Delta} \left[ b_1^\dagger b_2, b_1 b_2^\dagger \right]
 \\
 &= \frac{g^2}{ \Delta} \left( b_1^\dagger b_1 b_2 b_2^\dagger - b_1 b_1^\dagger b_2^\dagger b_2 \right)
 \\
@@ -146,7 +147,7 @@ $$
 \begin{aligned}
 \left[b_1, S \right] &= -\frac{g}{\Delta} \left[ b_1, b_1^\dagger b_2 - b_1 b_2^\dagger \right]
 \\
-&= -\frac{g}{\Delta} \left( b_1 b_1^\dagger b_2 - b_1 b_1 b_2^\dagger - b_1^\dagger b_1 b_2 + b_1 b_1 b_2^\dagger \right)
+&= -\frac{g}{\Delta} \left[ b_1, b_1^\dagger b_2 \right]
 \\
 &= -\frac{g}{\Delta} \left( b_1 b_1^\dagger - b_1^\dagger b_1 \right) b_2
 \\
@@ -158,9 +159,9 @@ $$
 \begin{aligned}
 \left[b_1^\dagger, S \right] &= -\frac{g}{\Delta} \left[ b_1^\dagger, b_1^\dagger b_2 - b_1 b_2^\dagger \right]
 \\
-&= -\frac{g}{\Delta} \left( b_1^\dagger b_1^\dagger b_2 - b_1^\dagger b_1 b_2^\dagger - b_1^\dagger b_1^\dagger b_2 + b_1 b_1^\dagger b_2^\dagger \right)
+&= \frac{g}{\Delta} \left[ b_1^\dagger, b_1 b_2^\dagger \right]
 \\
-&= -\frac{g}{\Delta} \left( b_1 b_1^\dagger - b_1^\dagger b_1 \right) b_2^\dagger
+&= \frac{g}{\Delta} \left( b_1^\dagger b_1 - b_1 b_1^\dagger \right) b_2^\dagger
 \\
 &= \frac{g}{\Delta} \left( 2 b_1^\dagger b_1 - 1 \right) b_2^\dagger
 \end{aligned}
@@ -271,4 +272,4 @@ $$
 
 すなわち、量子ビット 1 の状態が $\ket{0}$ か $\ket{1}$ かに応じて、量子ビット 2 は振動数 $|\frac{g \Omega}{\Delta}|$ で逆方向に回転する。これが、交差共鳴ゲートの基本原理である。
 
-また、交差共鳴ゲートで対象量子ビットの $\pi$ 回転を実現するためには、通常の $\pi$ パルスに対して $|\frac{\Delta}{g}|$ 倍のエネルギーが必要であることがわかる。
+また、交差共鳴ゲートで対象量子ビットの $\pi$ 回転を実現するためには、通常の $\pi$ パルスに対して $|\frac{\Delta}{g}|$ 倍のオーダーのエネルギーが必要であることがわかる。

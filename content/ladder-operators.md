@@ -319,7 +319,19 @@ $$
 $$
 \begin{aligned}
 \hat{a}^{n}\ket{n} = \sqrt{n!} \ket{0}
+\\
+\hat{a}^{n} = \sqrt{n!} \ket{0} \bra{n}
 \end{aligned}
 $$
 
-となる。
+となる。また、
+
+$$
+\begin{aligned}
+\hat{a}^{\dagger n}\hat{a}^{n}\ket{n} = n! \ket{n}
+\\
+\hat{a}^{\dagger n}\hat{a}^{n} = n! \ket{n} \bra{n}
+\end{aligned}
+$$
+
+である。
