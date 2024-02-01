@@ -256,6 +256,7 @@ H'_\mathrm{rot} &= \frac{g}{\Delta} \left( 0 - \frac{1}{2} \right) \left\{ \Omeg
 \\
 &= \frac{1}{2} \left\{ \left( -\frac{g \Omega}{\Delta} \right) b_2^\dagger + \mathrm{H.c.} \right\}
 \\
+&= \frac{1}{2} \left\{ -\Omega' b_2^\dagger + \mathrm{H.c.} \right\}
 \end{aligned}
 $$
 
@@ -267,9 +268,10 @@ H'_\mathrm{rot} &= \frac{g}{\Delta} \left( 1 - \frac{1}{2} \right) \left\{ \Omeg
 \\
 &= \frac{1}{2} \left\{ \left( \frac{g \Omega}{\Delta} \right) b_2^\dagger + \mathrm{H.c.} \right\}
 \\
+&= \frac{1}{2} \left\{ + \Omega' b_2^\dagger + \mathrm{H.c.} \right\}
 \end{aligned}
 $$
 
-すなわち、量子ビット 1 の状態が $\ket{0}$ か $\ket{1}$ かに応じて、量子ビット 2 は振動数 $|\frac{g \Omega}{\Delta}|$ で逆方向に回転する。これが、交差共鳴ゲートの基本原理である。
+すなわち、量子ビット 1 の状態が $\ket{0}$ か $\ket{1}$ かに応じて、量子ビット 2 は振動数 $|\Omega'| = |\frac{g \Omega}{\Delta}|$ で逆方向に回転する。これが、交差共鳴ゲートの基本原理である。
 
 また、交差共鳴ゲートで対象量子ビットの $\pi$ 回転を実現するためには、通常の $\pi$ パルスに対して $|\frac{\Delta}{g}|$ 倍のオーダーのエネルギーが必要であることがわかる。
