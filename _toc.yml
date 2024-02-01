@@ -15,6 +15,7 @@ chapters:
     sections:
       - file: content/coupled-system/coupled-qubits.md
       - file: content/coupled-system/coupled-qutrits.md
+  - file: content/cross-resonance-hamiltonian.md
   - file: content/ipynb/index.md
     sections:
       - glob: content/ipynb/*
