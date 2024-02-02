@@ -246,7 +246,9 @@ H'_\mathrm{rot} &= \frac{g}{\Delta} \left( b_1^\dagger b_1 - \frac{1}{2} \right)
 \end{aligned}
 $$
 
-となり、量子ビット 1 の状態 $\ket{\psi}_1$ に応じて作用が変化するハミルトニアンを得る。
+となり、量子ビット 1 の状態 $\ket{\psi}_1$ に応じて、量子ビット 2 に異なる作用が生じるハミルトニアンを得る。
+
+実際、
 
 $\ket{\psi}_1 = \ket{0}_1$ のとき、
 
@@ -254,9 +256,9 @@ $$
 \begin{aligned}
 H'_\mathrm{rot} &= \frac{g}{\Delta} \left( 0 - \frac{1}{2} \right) \left\{ \Omega b_2^\dagger + \mathrm{H.c.} \right\}
 \\
-&= \frac{1}{2} \left\{ \left( -\frac{g \Omega}{\Delta} \right) b_2^\dagger + \mathrm{H.c.} \right\}
+&= \frac{1}{2} \left\{ \left( -\frac{g}{\Delta} \Omega \right) b_2^\dagger + \mathrm{H.c.} \right\}
 \\
-&= \frac{1}{2} \left\{ -\Omega' b_2^\dagger + \mathrm{H.c.} \right\}
+&= \frac{1}{2} \left\{ - \Omega' b_2^\dagger + \mathrm{H.c.} \right\}
 \end{aligned}
 $$
 
@@ -266,12 +268,12 @@ $$
 \begin{aligned}
 H'_\mathrm{rot} &= \frac{g}{\Delta} \left( 1 - \frac{1}{2} \right) \left\{ \Omega b_2^\dagger + \mathrm{H.c.} \right\}
 \\
-&= \frac{1}{2} \left\{ \left( \frac{g \Omega}{\Delta} \right) b_2^\dagger + \mathrm{H.c.} \right\}
+&= \frac{1}{2} \left\{ \left( +\frac{g}{\Delta} \Omega \right) b_2^\dagger + \mathrm{H.c.} \right\}
 \\
 &= \frac{1}{2} \left\{ + \Omega' b_2^\dagger + \mathrm{H.c.} \right\}
 \end{aligned}
 $$
 
-すなわち、量子ビット 1 の状態が $\ket{0}$ か $\ket{1}$ かに応じて、量子ビット 2 は振動数 $|\Omega'| = |\frac{g \Omega}{\Delta}|$ で逆方向に回転する。これが、交差共鳴ゲートの基本原理である。
+すなわち、量子ビット 1 の状態が $\ket{0}$ か $\ket{1}$ かに応じて、量子ビット 2 は振動数 $|\Omega'| = |\frac{g}{\Delta}\Omega|$ で逆方向に回転する。これが、交差共鳴ゲートの基本原理である。
 
-また、交差共鳴ゲートで対象量子ビットの $\pi$ 回転を実現するためには、通常の $\pi$ パルスに対して $|\frac{\Delta}{g}|$ 倍のオーダーのエネルギーが必要であることがわかる。
+また、交差共鳴ゲートで対象量子ビットの $\pi$ 回転を実現するためには、通常の $\pi$ パルスに対して $|\frac{\Delta}{g}|$ 倍のエネルギーが必要であることがわかる。
