@@ -1,13 +1,13 @@
 ---
-title: Coupled Transmon Hamiltonian
-date: 2023-09-13
+title: Lattice transmon Hamiltonian
+date: 2023-02-02
 authors:
   - name: Akinori Machino
 ---
 
 # トランズモン結合系のハミルトニアン
 
-自由ハミルトニアンが $H_1, H_2$ で表わされる2つのトランズモンが結合定数 $g$ で相互作用するときのハミルトニアンは、
+自由ハミルトニアンが $H_1, H_2$ で表わされる2つのトランズモンが結合定数 $g_{12}$ で相互作用するときのハミルトニアンは、
 
 $$
 \begin{aligned}
@@ -15,7 +15,7 @@ H_1 &= \omega_1 b_1^\dagger b_1 + \frac{\alpha_1}{2} b_1^{\dagger 2} b_1^2
 \\
 H_2 &= \omega_2 b_2^\dagger b_2 + \frac{\alpha_2}{2} b_2^{\dagger 2} b_2^2
 \\
-V &= g \left( b_1^\dagger + b_1 \right) \left( b_2^\dagger + b_2 \right)
+H_{12} &= g_{12} \left( b_1^\dagger + b_1 \right) \left( b_2^\dagger + b_2 \right)
 \end{aligned}
 $$
 
@@ -23,7 +23,7 @@ $$
 
 $$
 \begin{aligned}
-H &= H_1 + H_2 + V
+H &= H_1 + H_2 + H_{12}
 \end{aligned}
 $$
 
@@ -38,7 +38,7 @@ $$
 \begin{aligned}
 H_i &= \omega_i b_i^\dagger b_i + \frac{\alpha_i}{2} b_i^{\dagger 2} b_i^2
 \\
-V_{ij} &= g_{ij} \left( b_i^\dagger + b_i \right) \left( b_j^\dagger + b_j \right)
+H_{ij} &= g_{ij} \left( b_i^\dagger + b_i \right) \left( b_j^\dagger + b_j \right)
 \end{aligned}
 $$
 
@@ -46,7 +46,7 @@ $$
 
 $$
 \begin{aligned}
-H &= \sum_i H_i + \sum_{\langle i, j \rangle} V_{ij}
+H &= \sum_i H_i + \sum_{\langle i, j \rangle} H_{ij}
 \end{aligned}
 $$
 
@@ -78,7 +78,7 @@ $$
 
 と表わされる。
 
-先程と同様に、ユニタリ変換
+ここで、ユニタリ変換
 
 $$
 \begin{aligned}
@@ -89,7 +89,7 @@ e^{-i \omega_3 b_3^\dagger b_3 t} \\
 \end{aligned}
 $$
 
-によって全てのトランズの回転座標系に乗れば、
+によって全てのトランズモンの回転座標系に乗れば、回転波近似を適用して、
 
 $$
 \begin{aligned}
@@ -102,31 +102,29 @@ H'
 \end{aligned}
 $$
 
-になり、$H'$ の基底は
+とできる。
+
+このとき、 $H'$ の基底は
 
 $$
 \begin{aligned}
 \ket{n_0 n_1 n_2 n_3}' &= U^\dagger \ket{n_0 n_1 n_2 n_3}
 \\
-&= e^{i (n_0 \omega_0 + n_1 \omega_1 + n_2 \omega_2 + n_3 \omega_3) t} \ket{n_0 n_1 n_2 n_3}
+&= e^{i \left(\omega_0 b^\dag b_0 + \omega_1 b^\dag b_1 + \omega_2 b^\dag b_2 + \omega_3 b^\dag b_3 \right) t} \ket{n_0 n_1 n_2 n_3}
+\\
+&= e^{i \left(n_0 \omega_0 + n_1 \omega_1 + n_2 \omega_2 + n_3 \omega_3 \right) t} \ket{n_0 n_1 n_2 n_3}
 \end{aligned}
 $$
 
-と変換される。また
+と変換されており、各トランズモンの基底も、
 
 $$
 \begin{aligned}
-\ket{n}'_i &= e^{i n_i \omega_i t} \ket{n}_i
+\ket{n}'_i 
+&= e^{i \omega_i b^\dag b_i t} \ket{n}_i
+\\
+&= e^{i n_i \omega_i t} \ket{n}_i
 \end{aligned}
 $$
 
-として
-
-$$
-\begin{aligned}
-\ket{n_0 n_1 n_2 n_3}' &= \ket{n}'_0 \otimes \ket{n}'_1 \otimes \ket{n}'_2 \otimes \ket{n}'_3
-\end{aligned}
-$$
-
-となる。
-
+と変換されている。
