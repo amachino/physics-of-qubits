@@ -48,13 +48,13 @@ $H$ の基底を $\ket{n_1 n_2} = \ket{n}_1 \otimes \ket{n}_2$ とすれば、$H
 
 $$
 \begin{aligned}
-\ket{n_1 n_2}' &= U^\dagger \ket{n_1 n_2}
+\ket{n_1 n_2}' &= U \ket{n_1 n_2}
 \\
-&= e^{i \omega_1 b_1^\dagger b_1 t} \ket{n}_1 \otimes e^{i \omega_2 b_2^\dagger b_2 t} \ket{n}_2
+&= e^{-i \omega_1 b_1^\dagger b_1 t} \ket{n}_1 \otimes e^{-i \omega_2 b_2^\dagger b_2 t} \ket{n}_2
 \\
-&= e^{i n_1 \omega_1 t} \ket{n}_1 \otimes e^{i n_2 \omega_2 t} \ket{n}_2
+&= e^{-i n_1 \omega_1 t} \ket{n}_1 \otimes e^{-i n_2 \omega_2 t} \ket{n}_2
 \\
-&= e^{i (n_1 \omega_1 + n_2 \omega_2) t} \ket{n_1 n_2}
+&= e^{-i (n_1 \omega_1 + n_2 \omega_2) t} \ket{n_1 n_2}
 \end{aligned}
 $$
 
@@ -62,9 +62,9 @@ $$
 
 $$
 \begin{aligned}
-\ket{n}'_1 &= e^{i n_1 \omega_1 t} \ket{n}_1 
+\ket{n}'_1 &= e^{-i n_1 \omega_1 t} \ket{n}_1 
 \\
-\ket{n}'_2 &= e^{i n_2 \omega_2 t} \ket{n}_2 
+\ket{n}'_2 &= e^{-i n_2 \omega_2 t} \ket{n}_2 
 \end{aligned}
 $$
 
@@ -211,7 +211,7 @@ $$
 
 $$
 \begin{aligned}
-H''
+H^{(1)}
 &= U_1^\dagger H U_1 -i U_1^\dagger \dot{U_1}
 \\
 &= \omega_1 b_1^\dagger b_1 + \frac{\alpha_1}{2} b_1^{\dagger 2} b_1^2
@@ -232,11 +232,11 @@ $$
 
 $$
 \begin{aligned}
-\ket{n_1 n_2}'' &= U_1^\dagger \ket{n_1 n_2}
+\ket{n_1 n_2}^{(1)} &= U_1 \ket{n_1 n_2}
 \\
-&= e^{i \omega_1 b_1^\dagger b_1 t} \ket{n}_1 \otimes e^{i \omega_1 b_2^\dagger b_2 t} \ket{n}_2
+&= e^{-i \omega_1 b_1^\dagger b_1 t} \ket{n}_1 \otimes e^{-i \omega_1 b_2^\dagger b_2 t} \ket{n}_2
 \\
-&= e^{i \omega_1 (n_1 + n_2) t} \ket{n_1 n_2}
+&= e^{-i \omega_1 (n_1 + n_2) t} \ket{n_1 n_2}
 \end{aligned}
 $$
 
@@ -244,11 +244,11 @@ $$
 
 $$
 \begin{aligned}
-\ket{n}''_1 &= e^{i n_1 \omega_1 t} \ket{n}_1 
+\ket{n}^{(1)}_1 &= e^{-i n_1 \omega_1 t} \ket{n}_1 
 = \ket{n}'_1
 \\
-\ket{n}''_2 &= e^{i n_2 \omega_1 t} \ket{n}_2 
-= e^{i n_2 (\omega_1 - \omega_2) t} \ket{n}_2'
+\ket{n}^{(1)}_2 &= e^{-i n_2 \omega_1 t} \ket{n}_2 
+= e^{-i n_2 (\omega_1 - \omega_2) t} \ket{n}_2'
 \end{aligned}
 $$
 
@@ -258,10 +258,18 @@ $$
 
 $$
 \begin{aligned}
-\ket{\psi}_2 &= \sum_{n} c_{n} \ket{n}''_2
+\ket{\psi}_2 &= \sum_{n} c_{n} \ket{n}^{(1)}_2
 \\
-&= \sum_{n} c_{n} e^{i n (\omega_1 - \omega_2) t} \ket{n}_2'
+&= \sum_{n} c_{n} e^{-i n (\omega_1 - \omega_2) t} \ket{n}_2'
 \end{aligned}
 $$
 
-であるので、トランズモン 1 の回転座標系の状態ベクトルの係数に対して $e^{i n (\omega_1 - \omega_2) t}$ をかけることで、トランズモン 2 の回転座標系の係数を得ることができる。
+であるので、トランズモン 1 の回転座標系の状態ベクトルの各係数 $c_{n}$ に対して $e^{-i n (\omega_1 - \omega_2) t}$ をかけることで、トランズモン 2 の回転座標系の係数を得ることができる。
+
+あるいは、
+
+$$
+e^{-i (\omega_1 - \omega_2) b_2^\dagger b_2 t} \ket{\psi}^{(1)}_2
+$$
+
+と行列計算してもよい。
