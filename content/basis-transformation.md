@@ -65,9 +65,7 @@ $$
 
 $$
 \begin{aligned}
-\ket{\psi'}
-&= \ket{\psi}
-\\
+\ket{\psi}
 &= U U^\dagger \ket{\psi}
 \\
 &= U \left\{ a (U^\dagger \ket{0}) + b (U^\dagger \ket{1}) \right\}
