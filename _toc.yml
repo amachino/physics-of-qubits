@@ -11,6 +11,7 @@ chapters:
   - file: content/basis-transformation.md
   - file: content/interaction-picture.md
   - file: content/time-dependent-hamiltonian.md
+  - file: content/pwc-hamiltonian.md
   - file: content/coupled-transmon-hamiltonian.md
   - file: content/schrieffer-wolff-transformation.md
   - file: content/coupled-system/coupled-two-quantum-system.md
