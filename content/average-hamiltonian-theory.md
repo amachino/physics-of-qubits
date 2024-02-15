@@ -63,11 +63,11 @@ $$
 
 $$
 \begin{aligned}
-\Omega_1(t) &=\int_0^t A\left(t_1\right) d t_1
+\Omega_1(t) &=\int_0^t A(t_1) d t_1
 \\
-\Omega_2(t) &=\frac{1}{2} \int_0^t d t_1 \int_0^{t_1} d t_2\left[A\left(t_1\right), A\left(t_2\right)\right]
+\Omega_2(t) &=\frac{1}{2} \int_0^t d t_1 \int_0^{t_1} d t_2\left[A(t_1), A(t_2)\right]
 \\
-\Omega_3(t) &= \frac{1}{6} \int_0^t d t_1 \int_0^{t_1} d t_2 \int_0^{t_2} d t_3\left(\left[A\left(t_1\right),\left[A\left(t_2\right), A\left(t_3\right)\right]\right]+\left[A\left(t_3\right),\left[A\left(t_2\right), A\left(t_1\right)\right]\right]\right)
+\Omega_3(t) &= \frac{1}{6} \int_0^t d t_1 \int_0^{t_1} d t_2 \int_0^{t_2} d t_3\left(\left[A(t_1),\left[A(t_2), A(t_3)\right]\right]+\left[A(t_3),\left[A(t_2), A(t_1)\right]\right]\right)
 \\
 \Omega_4(t) &= \frac{1}{12} \int_0^t d t_1 \int_0^{t_1} d t_2 \int_0^{t_2} d t_3 \int_0^{t_3} d t_4\left(\left[\left[\left[A_1, A_2\right], A_3\right], A_4\right] \right.
 \\
@@ -89,7 +89,7 @@ $$
 
 これを有限の項で打ち切ることで、ユニタリ性を保ったまま、時間発展演算子 $U(t)$ を近似的に求めることができる。
 
-以下、マグナス級数を $n$ 次で打ち切った場合の時間発展演算子を $U^{(n)}(t)$ と書くことにしよう。
+以下、マグナス級数を $n$ 次で打ち切った場合の時間発展演算子を $U^{(n)}(t)$ と書くことにする。
 
 ### 1次の平均ハミルトニアン
 
@@ -97,7 +97,7 @@ $$
 
 $$
 \begin{aligned}
-\Omega_1(t) &= \int_0^t A\left(t_1\right) d t_1
+\Omega_1(t) &= \int_0^t A(t_1) d t_1
 \\
 &= -i \int_0^t H(t_1) d t_1
 \end{aligned}
@@ -165,9 +165,9 @@ $$
 
 $$
 \begin{aligned}
-\Omega_2(t) &= \frac{1}{2} \int_0^t d t_1 \int_0^{t_1} d t_2\left[A\left(t_1\right), A\left(t_2\right)\right]
+\Omega_2(t) &= \frac{1}{2} \int_0^t d t_1 \int_0^{t_1} d t_2\left[A(t_1), A(t_2)\right]
 \\
-&= - \frac{1}{2} \int_0^t d t_1 \int_0^{t_1} d t_2\left[H\left(t_1\right), H\left(t_2\right)\right]
+&= - \frac{1}{2} \int_0^t d t_1 \int_0^{t_1} d t_2\left[H(t_1), H(t_2)\right]
 \end{aligned}
 $$
 
@@ -177,9 +177,9 @@ $$
 \begin{aligned}
 \bar{H}^{(2)} &= \frac{i}{t} \left( \Omega_1(t) + \Omega_2(t) \right)
 \\
-&= \frac{1}{t} \left( \int_0^t H(t_1) d t_1 - \frac{i}{2} \int_0^t d t_1 \int_0^{t_1} d t_2\left[H\left(t_1\right), H\left(t_2\right)\right] \right)
+&= \frac{1}{t} \left( \int_0^t H(t_1) d t_1 - \frac{i}{2} \int_0^t d t_1 \int_0^{t_1} d t_2\left[H(t_1), H(t_2)\right] \right)
 \\
-&= \frac{1}{t} \left[ \int_0^t d t_1 \left( H(t_1) - \frac{i}{2} \int_0^{t_1} d t_2\left[H\left(t_1\right), H\left(t_2\right)\right] \right) \right]
+&= \frac{1}{t} \left[ \int_0^t d t_1 \left( H(t_1) - \frac{i}{2} \int_0^{t_1} d t_2\left[H(t_1), H(t_2)\right] \right) \right]
 \end{aligned}
 $$
 
@@ -189,7 +189,7 @@ $$
 \begin{aligned}
 U^{(2)}(t) &= e^{-i \bar{H}^{(2)} t}
 \\
-&= \exp \left[ -i \left\{ \int_0^t d t_1 \left( H(t_1) - \frac{i}{2} \int_0^{t_1} d t_2\left[H\left(t_1\right), H\left(t_2\right)\right] \right) \right\} \right]
+&= \exp \left[ -i \left\{ \int_0^t d t_1 \left( H(t_1) - \frac{i}{2} \int_0^{t_1} d t_2\left[H(t_1), H(t_2)\right] \right) \right\} \right]
 \end{aligned}
 $$
 
@@ -199,9 +199,9 @@ $$
 
 $$
 \begin{aligned}
-\Omega_3(t) &= \frac{1}{6} \int_0^t d t_1 \int_0^{t_1} d t_2 \int_0^{t_2} d t_3\left(\left[A\left(t_1\right),\left[A\left(t_2\right), A\left(t_3\right)\right]\right]+\left[A\left(t_3\right),\left[A\left(t_2\right), A\left(t_1\right)\right]\right]\right)
+\Omega_3(t) &= \frac{1}{6} \int_0^t d t_1 \int_0^{t_1} d t_2 \int_0^{t_2} d t_3\left(\left[A(t_1),\left[A(t_2), A(t_3)\right]\right]+\left[A(t_3),\left[A(t_2), A(t_1)\right]\right]\right)
 \\
-&= \frac{i}{6} \int_0^t d t_1 \int_0^{t_1} d t_2 \int_0^{t_2} d t_3\left(\left[H\left(t_1\right),\left[H\left(t_2\right), H\left(t_3\right)\right]\right]+\left[H\left(t_3\right),\left[H\left(t_2\right), H\left(t_1\right)\right]\right]\right)
+&= \frac{i}{6} \int_0^t d t_1 \int_0^{t_1} d t_2 \int_0^{t_2} d t_3\left(\left[H(t_1),\left[H(t_2), H(t_3)\right]\right]+\left[H(t_3),\left[H(t_2), H(t_1)\right]\right]\right)
 \end{aligned}
 $$
 
@@ -211,9 +211,9 @@ $$
 \begin{aligned}
 \bar{H}^{(3)} &= \frac{i}{t} \left( \Omega_1(t) + \Omega_2(t) + \Omega_3(t) \right)
 \\
-&= \frac{1}{t} \left( \int_0^t H(t_1) d t_1 - \frac{i}{2} \int_0^t d t_1 \int_0^{t_1} d t_2\left[H\left(t_1\right), H\left(t_2\right)\right] - \frac{1}{6} \int_0^t d t_1 \int_0^{t_1} d t_2 \int_0^{t_2} d t_3\left(\left[H\left(t_1\right),\left[H\left(t_2\right), H\left(t_3\right)\right]\right]+\left[H\left(t_3\right),\left[H\left(t_2\right), H\left(t_1\right)\right]\right]\right) \right)
+&= \frac{1}{t} \left( \int_0^t H(t_1) d t_1 - \frac{i}{2} \int_0^t d t_1 \int_0^{t_1} d t_2\left[H(t_1), H(t_2)\right] - \frac{1}{6} \int_0^t d t_1 \int_0^{t_1} d t_2 \int_0^{t_2} d t_3\left(\left[H(t_1),\left[H(t_2), H(t_3)\right]\right]+\left[H(t_3),\left[H(t_2), H(t_1)\right]\right]\right) \right)
 \\
-&= \frac{1}{t} \left[ \int_0^t d t_1 \left( H(t_1) - \frac{i}{2} \int_0^{t_1} d t_2\left[H\left(t_1\right), H\left(t_2\right)\right] - \frac{1}{6} \int_0^{t_1} d t_2 \int_0^{t_2} d t_3\left(\left[H\left(t_1\right),\left[H\left(t_2\right), H\left(t_3\right)\right]\right]+\left[H\left(t_3\right),\left[H\left(t_2\right), H\left(t_1\right)\right]\right]\right) \right) \right]
+&= \frac{1}{t} \left[ \int_0^t d t_1 \left( H(t_1) - \frac{i}{2} \int_0^{t_1} d t_2\left[H(t_1), H(t_2)\right] - \frac{1}{6} \int_0^{t_1} d t_2 \int_0^{t_2} d t_3\left(\left[H(t_1),\left[H(t_2), H(t_3)\right]\right]+\left[H(t_3),\left[H(t_2), H(t_1)\right]\right]\right) \right) \right]
 \end{aligned}
 $$
 
@@ -223,7 +223,7 @@ $$
 \begin{aligned}
 U^{(3)}(t) &= e^{-i \bar{H}^{(3)} t}
 \\
-&= \exp \left[ -i \left\{ \int_0^t d t_1 \left( H(t_1) - \frac{i}{2} \int_0^{t_1} d t_2\left[H\left(t_1\right), H\left(t_2\right)\right] - \frac{1}{6} \int_0^{t_1} d t_2 \int_0^{t_2} d t_3\left(\left[H\left(t_1\right),\left[H\left(t_2\right), H\left(t_3\right)\right]\right]+\left[H\left(t_3\right),\left[H\left(t_2\right), H\left(t_1\right)\right]\right]\right) \right) \right\} \right]
+&= \exp \left[ -i \left\{ \int_0^t d t_1 \left( H(t_1) - \frac{i}{2} \int_0^{t_1} d t_2\left[H(t_1), H(t_2)\right] - \frac{1}{6} \int_0^{t_1} d t_2 \int_0^{t_2} d t_3\left(\left[H(t_1),\left[H(t_2), H(t_3)\right]\right]+\left[H(t_3),\left[H(t_2), H(t_1)\right]\right]\right) \right) \right\} \right]
 \end{aligned}
 $$
 
