@@ -65,7 +65,7 @@ U(t) &= I
 \\
 &+ \cdots
 \\
-&+ (-i)^n \int_0^t dt_1 \int_0^{t_1} dt_2 \cdots \int_0^{t_{n-1}} dt_n H(t_1) H(t_2) \cdots H(t_n) \tag{6}
+&+ (-i)^n \int_0^t dt_1 \int_0^{t_1} dt_2 \cdots \int_0^{t_{n-1}} dt_n H(t_1) H(t_2) \cdots H(t_n)
 \end{aligned}
 $$
 
@@ -106,7 +106,7 @@ $$
 時間順序積を用いた表式 $(4)$ は見た目上シンプルだが、実際の計算は
 
 $$
-U(t) = I + \sum_{n=0}^\infty (-i)^n \int_0^t dt_1 \int_0^{t_1} dt_2 \cdots \int_0^{t_{n-1}} dt_n H(t_1) H(t_2) \cdots H(t_n) \tag{7}
+U(t) = I + \sum_{n=0}^\infty (-i)^n \int_0^t dt_1 \int_0^{t_1} dt_2 \cdots \int_0^{t_{n-1}} dt_n H(t_1) H(t_2) \cdots H(t_n)
 $$
 
 を用いて、有限の $n$ 次までの積分によって近似的に計算することになるだろう。
