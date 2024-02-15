@@ -11,7 +11,8 @@ authors:
 
 $$
 H(t) = H_n \quad (t_{n-1} \le t \le t_{n})
-\\
+$$
+$$
 n = 1, 2, \dots
 $$
 
@@ -51,7 +52,8 @@ $$
 
 $$
 H(t) = \frac{I(t)}{2} \sigma_x
-\\
+$$
+$$
 I(t) = I_n \quad (t_{n-1} \le t \le t_{n})
 $$
 
