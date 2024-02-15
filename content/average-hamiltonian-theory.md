@@ -115,11 +115,11 @@ $$
 
 となる。
 
-ここで、「平均ハミルトニアン」 $\tilde{H}$ を
+ここで、「平均ハミルトニアン」 $\bar{H}$ を
 
 $$
 \begin{aligned}
-\tilde{H} &\equiv \frac{1}{t} \int_0^t H(t_1) d t_1
+\bar{H} &\equiv \frac{1}{t} \int_0^t H(t_1) d t_1
 \end{aligned}
 $$
 
@@ -127,25 +127,25 @@ $$
 
 $$
 \begin{aligned}
-U^{(1)}(t) &= e^{-i \tilde{H} t}
+U^{(1)}(t) &= e^{-i \bar{H} t}
 \end{aligned}
 $$
 
 と書くことができる。
 
-すなわち、1次のマグナス展開は、時間に依存する $H(t)$ の代わりに、 $H(t)$ を単純に時間平均した $\tilde{H}$ を用いて物理系を近似することに対応する。これが、平均ハミルトニアン理論の名前の由来である。
+すなわち、1次のマグナス展開は、時間に依存する $H(t)$ の代わりに、 $H(t)$ を単純に時間平均した $\bar{H}$ を用いて物理系を近似することに対応する。これが、平均ハミルトニアン理論の名前の由来である。
 
-以下、 $n$ 次の平均ハミルトニアン $\tilde{H}^{(n)}$ を
+以下、 $n$ 次の平均ハミルトニアン $\bar{H}^{(n)}$ を
 
 $$
-U^{(n)}(t) = e^{-i \tilde{H}^{(n)} t}
+U^{(n)}(t) = e^{-i \bar{H}^{(n)} t}
 $$
 
 によって表されるものとして定義する。つまり
 
 $$
 \begin{aligned}
-\tilde{H}^{(n)} &= \frac{i}{t} \sum_{k=1}^n \Omega_k(t)
+\bar{H}^{(n)} &= \frac{i}{t} \sum_{k=1}^n \Omega_k(t)
 \end{aligned}
 $$
 
@@ -155,7 +155,7 @@ $$
 
 $$
 \begin{aligned}
-\tilde{H}^{(1)} &= \frac{1}{t} \int_0^t H(t_1) d t_1
+\bar{H}^{(1)} &= \frac{1}{t} \int_0^t H(t_1) d t_1
 \end{aligned}
 $$
 
@@ -175,7 +175,7 @@ $$
 
 $$
 \begin{aligned}
-\tilde{H}^{(2)} &= \frac{i}{t} \left( \Omega_1(t) + \Omega_2(t) \right)
+\bar{H}^{(2)} &= \frac{i}{t} \left( \Omega_1(t) + \Omega_2(t) \right)
 \\
 &= \frac{1}{t} \left( \int_0^t H(t_1) d t_1 - \frac{i}{2} \int_0^t d t_1 \int_0^{t_1} d t_2\left[H\left(t_1\right), H\left(t_2\right)\right] \right)
 \\
@@ -187,7 +187,7 @@ $$
 
 $$
 \begin{aligned}
-U^{(2)}(t) &= e^{-i \tilde{H}^{(2)} t}
+U^{(2)}(t) &= e^{-i \bar{H}^{(2)} t}
 \\
 &= \exp \left[ -i \left\{ \int_0^t d t_1 \left( H(t_1) - \frac{i}{2} \int_0^{t_1} d t_2\left[H\left(t_1\right), H\left(t_2\right)\right] \right) \right\} \right]
 \end{aligned}
@@ -209,7 +209,7 @@ $$
 
 $$
 \begin{aligned}
-\tilde{H}^{(3)} &= \frac{i}{t} \left( \Omega_1(t) + \Omega_2(t) + \Omega_3(t) \right)
+\bar{H}^{(3)} &= \frac{i}{t} \left( \Omega_1(t) + \Omega_2(t) + \Omega_3(t) \right)
 \\
 &= \frac{1}{t} \left( \int_0^t H(t_1) d t_1 - \frac{i}{2} \int_0^t d t_1 \int_0^{t_1} d t_2\left[H\left(t_1\right), H\left(t_2\right)\right] - \frac{1}{6} \int_0^t d t_1 \int_0^{t_1} d t_2 \int_0^{t_2} d t_3\left(\left[H\left(t_1\right),\left[H\left(t_2\right), H\left(t_3\right)\right]\right]+\left[H\left(t_3\right),\left[H\left(t_2\right), H\left(t_1\right)\right]\right]\right) \right)
 \\
@@ -221,7 +221,7 @@ $$
 
 $$
 \begin{aligned}
-U^{(3)}(t) &= e^{-i \tilde{H}^{(3)} t}
+U^{(3)}(t) &= e^{-i \bar{H}^{(3)} t}
 \\
 &= \exp \left[ -i \left\{ \int_0^t d t_1 \left( H(t_1) - \frac{i}{2} \int_0^{t_1} d t_2\left[H\left(t_1\right), H\left(t_2\right)\right] - \frac{1}{6} \int_0^{t_1} d t_2 \int_0^{t_2} d t_3\left(\left[H\left(t_1\right),\left[H\left(t_2\right), H\left(t_3\right)\right]\right]+\left[H\left(t_3\right),\left[H\left(t_2\right), H\left(t_1\right)\right]\right]\right) \right) \right\} \right]
 \end{aligned}
@@ -233,7 +233,7 @@ $$
 
 2つのエルミート演算子 $A$ と $B$ に対して、その交換子 $[A, B]$ のエルミート共役は $[A, B]^\dagger = -[A, B]$ である。
 
-この関係を用いると、平均ハミルトニアン $\tilde{H}^{(n)}$ はすべてエルミート演算子であることが確認できる [^2]。
+この関係を用いると、平均ハミルトニアン $\bar{H}^{(n)}$ はすべてエルミート演算子であることが確認できる [^2]。
 
 [^2]: はずである。一般に何故成り立つかはよく分かっていない。
 
