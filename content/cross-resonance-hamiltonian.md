@@ -13,9 +13,9 @@ $$
 \begin{aligned}
 H_\mathrm{sys} &= H_0 + H_\mathrm{int}
 \\
-&= \omega_1 b_1^\dagger b_1 + \omega_2 b_2^\dagger b_2 + g \left( b_1^\dagger b_2 + b_1 b_2^\dagger \right)
+&= \omega_1 \sigma_1^+ \sigma_1^- + \omega_2 \sigma_2^+ \sigma_2^- + g \left( \sigma_1^+ \sigma_2^- + \sigma_1^- \sigma_2^+ \right)
 \\
-H_\mathrm{drive} &= \frac{1}{2} \left( \Omega e^{-i \omega_d t} b_1^\dagger + \Omega^* e^{i \omega_d t} b_1 \right)
+H_\mathrm{drive} &= \frac{1}{2} \left( \Omega e^{-i \omega_d t} \sigma_1^+ + \Omega^* e^{i \omega_d t} \sigma_1^- \right)
 \end{aligned}
 $$
 
@@ -29,11 +29,11 @@ $$
 
 と表すことにする。
 
-$b^\dagger, b$ はそれぞれ、量子ビット（フェルミオン）の生成消滅演算子であり、反交換関係
+$\sigma^+, \sigma^-$ は量子ビットの昇降演算子であり、反交換関係
 
 $$
 \begin{aligned}
-\left\{ b_i, b_i^\dagger \right\} &= b_i b_i^\dagger + b_i^\dagger b_i = 1
+\left\{ \sigma_i^-, \sigma_i^+ \right\} &= \sigma_i^- \sigma_i^+ + \sigma_i^+ \sigma_i^- = 1
 \end{aligned}
 $$
 
@@ -45,7 +45,7 @@ $\Delta = \omega_1 - \omega_2$ とし、反エルミート演算子
 
 $$
 \begin{aligned}
-S &= - \frac{g}{\Delta} \left( b_1^\dagger b_2 - b_1 b_2^\dagger \right)
+S &= - \frac{g}{\Delta} \left( \sigma_1^+ \sigma_2^- - \sigma_1^- \sigma_2^+ \right)
 \end{aligned}
 $$
 
@@ -109,19 +109,19 @@ $$
 
 $$
 \begin{aligned}
-\frac{1}{2} \left[ H_\mathrm{int}, S \right] &= -\frac{g^2}{2\Delta} \left[ b_1^\dagger b_2 + b_1 b_2^\dagger, b_1^\dagger b_2 - b_1 b_2^\dagger \right]
+\frac{1}{2} \left[ H_\mathrm{int}, S \right] &= -\frac{g^2}{2\Delta} \left[ \sigma_1^+ \sigma_2^- + \sigma_1^- \sigma_2^+, \sigma_1^+ \sigma_2^- - \sigma_1^- \sigma_2^+ \right]
 \\
 &= \frac{g^2}{2\Delta} \left(
-\left[ b_1^\dagger b_2, b_1 b_2^\dagger \right] - \left[ b_1 b_2^\dagger, b_1^\dagger b_2 \right]
+\left[ \sigma_1^+ \sigma_2^-, \sigma_1^- \sigma_2^+ \right] - \left[ \sigma_1^- \sigma_2^+, \sigma_1^+ \sigma_2^- \right]
 \right)
 \\
-&= \frac{g^2}{\Delta} \left[ b_1^\dagger b_2, b_1 b_2^\dagger \right]
+&= \frac{g^2}{\Delta} \left[ \sigma_1^+ \sigma_2^-, \sigma_1^- \sigma_2^+ \right]
 \\
-&= \frac{g^2}{ \Delta} \left( b_1^\dagger b_1 b_2 b_2^\dagger - b_1 b_1^\dagger b_2^\dagger b_2 \right)
+&= \frac{g^2}{ \Delta} \left( \sigma_1^+ \sigma_1^- \sigma_2^- \sigma_2^+ - \sigma_1^- \sigma_1^+ \sigma_2^+ \sigma_2^- \right)
 \\
-&= \frac{g^2}{ \Delta} \left( b_1^\dagger b_1 b_2 b_2^\dagger + b_1^\dagger b_1 b_2^\dagger b_2 - b_2^\dagger b_2 \right)
+&= \frac{g^2}{ \Delta} \left( \sigma_1^+ \sigma_1^- \sigma_2^- \sigma_2^+ + \sigma_1^+ \sigma_1^- \sigma_2^+ \sigma_2^- - \sigma_2^+ \sigma_2^- \right)
 \\
-&= \frac{g^2}{ \Delta} \left( b_1^\dagger b_1 - b_2^\dagger b_2 \right)
+&= \frac{g^2}{ \Delta} \left( \sigma_1^+ \sigma_1^- - \sigma_2^+ \sigma_2^- \right)
 \end{aligned}
 $$
 
@@ -131,11 +131,11 @@ $$
 \begin{aligned}
 H_\mathrm{sys}' &= H_0 + \frac{1}{2} \left[ H_\mathrm{int}, S \right]
 \\
-&= \omega_1 b_1^\dagger b_1 + \omega_2 b_2^\dagger b_2 + \frac{g^2}{ \Delta} \left( b_1^\dagger b_1 - b_2^\dagger b_2 \right)
+&= \omega_1 \sigma_1^+ \sigma_1^- + \omega_2 \sigma_2^+ \sigma_2^- + \frac{g^2}{ \Delta} \left( \sigma_1^+ \sigma_1^- - \sigma_2^+ \sigma_2^- \right)
 \\
-&= \left( \omega_1 + \frac{g^2}{ \Delta} \right) b_1^\dagger b_1 + \left( \omega_2 - \frac{g^2}{ \Delta} \right) b_2^\dagger b_2
+&= \left( \omega_1 + \frac{g^2}{ \Delta} \right) \sigma_1^+ \sigma_1^- + \left( \omega_2 - \frac{g^2}{ \Delta} \right) \sigma_2^+ \sigma_2^-
 \\
-&= \tilde{\omega}_1 b_1^\dagger b_1 + \tilde{\omega}_2 b_2^\dagger b_2
+&= \tilde{\omega}_1 \sigma_1^+ \sigma_1^- + \tilde{\omega}_2 \sigma_2^+ \sigma_2^-
 \end{aligned}
 $$
 
@@ -145,35 +145,35 @@ $$
 
 $$
 \begin{aligned}
-\left[b_1, S \right] &= -\frac{g}{\Delta} \left[ b_1, b_1^\dagger b_2 - b_1 b_2^\dagger \right]
+\left[\sigma_1^-, S \right] &= -\frac{g}{\Delta} \left[ \sigma_1^-, \sigma_1^+ \sigma_2^- - \sigma_1^- \sigma_2^+ \right]
 \\
-&= -\frac{g}{\Delta} \left[ b_1, b_1^\dagger b_2 \right]
+&= -\frac{g}{\Delta} \left[ \sigma_1^-, \sigma_1^+ \sigma_2^- \right]
 \\
-&= -\frac{g}{\Delta} \left( b_1 b_1^\dagger - b_1^\dagger b_1 \right) b_2
+&= -\frac{g}{\Delta} \left( \sigma_1^- \sigma_1^+ - \sigma_1^+ \sigma_1^- \right) \sigma_2^-
 \\
-&= \frac{g}{\Delta} \left( 2 b_1^\dagger b_1 - 1 \right) b_2
+&= \frac{g}{\Delta} \left( 2 \sigma_1^+ \sigma_1^- - 1 \right) \sigma_2^-
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
-\left[b_1^\dagger, S \right] &= -\frac{g}{\Delta} \left[ b_1^\dagger, b_1^\dagger b_2 - b_1 b_2^\dagger \right]
+\left[\sigma_1^+, S \right] &= -\frac{g}{\Delta} \left[ \sigma_1^+, \sigma_1^+ \sigma_2^- - \sigma_1^- \sigma_2^+ \right]
 \\
-&= \frac{g}{\Delta} \left[ b_1^\dagger, b_1 b_2^\dagger \right]
+&= \frac{g}{\Delta} \left[ \sigma_1^+, \sigma_1^- \sigma_2^+ \right]
 \\
-&= \frac{g}{\Delta} \left( b_1^\dagger b_1 - b_1 b_1^\dagger \right) b_2^\dagger
+&= \frac{g}{\Delta} \left( \sigma_1^+ \sigma_1^- - \sigma_1^- \sigma_1^+ \right) \sigma_2^+
 \\
-&= \frac{g}{\Delta} \left( 2 b_1^\dagger b_1 - 1 \right) b_2^\dagger
+&= \frac{g}{\Delta} \left( 2 \sigma_1^+ \sigma_1^- - 1 \right) \sigma_2^+
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
-\left[H_\mathrm{drive}, S \right] &= \left[ \frac{1}{2} \left\{ \Omega e^{-i \omega_d t} b_1^\dagger + \Omega^* e^{i \omega_d t} b_1 \right\}, S \right]
+\left[H_\mathrm{drive}, S \right] &= \left[ \frac{1}{2} \left\{ \Omega e^{-i \omega_d t} \sigma_1^+ + \Omega^* e^{i \omega_d t} \sigma_1^- \right\}, S \right]
 \\
-&= \frac{1}{2} \left\{ \Omega e^{-i \omega_d t} \left[ b_1^\dagger, S \right] + \Omega^* e^{i \omega_d t} \left[ b_1, S \right] \right\}
+&= \frac{1}{2} \left\{ \Omega e^{-i \omega_d t} \left[ \sigma_1^+, S \right] + \Omega^* e^{i \omega_d t} \left[ \sigma_1^-, S \right] \right\}
 \\
-&= \frac{g}{\Delta} \left( b_1^\dagger b_1 - \frac{1}{2} \right) \left\{ \Omega e^{-i \omega_d t} b_2^\dagger + \Omega^* e^{i \omega_d t}  b_2 \right\}
+&= \frac{g}{\Delta} \left( \sigma_1^+ \sigma_1^- - \frac{1}{2} \right) \left\{ \Omega e^{-i \omega_d t} \sigma_2^+ + \Omega^* e^{i \omega_d t}  \sigma_2^- \right\}
 \end{aligned}
 $$
 
@@ -183,10 +183,10 @@ $$
 \begin{aligned}
 H_\mathrm{drive}' &= H_\mathrm{drive} + \left[ H_\mathrm{drive}, S \right]
 \\
-&= \frac{1}{2} \left\{ \Omega e^{-i \omega_d t} b_1^\dagger + \Omega^* e^{i \omega_d t} b_1 \right\} + \frac{g}{\Delta} \left( b_1^\dagger b_1 - \frac{1}{2} \right) \left\{ \Omega e^{-i \omega_d t} b_2^\dagger + \Omega^* e^{i \omega_d t}  b_2 \right\}
+&= \frac{1}{2} \left\{ \Omega e^{-i \omega_d t} \sigma_1^+ + \Omega^* e^{i \omega_d t} \sigma_1^- \right\} + \frac{g}{\Delta} \left( \sigma_1^+ \sigma_1^- - \frac{1}{2} \right) \left\{ \Omega e^{-i \omega_d t} \sigma_2^+ + \Omega^* e^{i \omega_d t}  \sigma_2^- \right\}
 \\
-&= \frac{1}{2} \left\{ \Omega e^{-i \omega_d t} b_1^\dagger + \mathrm{H.c.} \right\}
-+ \frac{g}{\Delta} \left( b_1^\dagger b_1 - \frac{1}{2} \right) \left\{ \Omega e^{-i \omega_d t} b_2^\dagger + \mathrm{H.c.} \right\}
+&= \frac{1}{2} \left\{ \Omega e^{-i \omega_d t} \sigma_1^+ + \mathrm{H.c.} \right\}
++ \frac{g}{\Delta} \left( \sigma_1^+ \sigma_1^- - \frac{1}{2} \right) \left\{ \Omega e^{-i \omega_d t} \sigma_2^+ + \mathrm{H.c.} \right\}
 \end{aligned}
 $$
 
@@ -198,12 +198,12 @@ $$
 \begin{aligned}
 H' &= H_\mathrm{sys}' + H_\mathrm{drive}'
 \\
-&= \left( \omega_1 + \frac{g^2}{ \Delta} \right) b_1^\dagger b_1 + \left( \omega_2 - \frac{g^2}{ \Delta} \right) b_2^\dagger b_2 + \frac{1}{2} \left\{ \Omega e^{-i \omega_d t} b_1^\dagger + \mathrm{H.c.} \right\}
-+ \frac{g}{\Delta} \left( b_1^\dagger b_1 - \frac{1}{2} \right) \left\{ \Omega e^{-i \omega_d t} b_2^\dagger + \mathrm{H.c.} \right\}
+&= \left( \omega_1 + \frac{g^2}{ \Delta} \right) \sigma_1^+ \sigma_1^- + \left( \omega_2 - \frac{g^2}{ \Delta} \right) \sigma_2^+ \sigma_2^- + \frac{1}{2} \left\{ \Omega e^{-i \omega_d t} \sigma_1^+ + \mathrm{H.c.} \right\}
++ \frac{g}{\Delta} \left( \sigma_1^+ \sigma_1^- - \frac{1}{2} \right) \left\{ \Omega e^{-i \omega_d t} \sigma_2^+ + \mathrm{H.c.} \right\}
 \\
-&= \tilde{\omega}_1 b_1^\dagger b_1 + \tilde{\omega}_2 b_2^\dagger b_2
-+ \frac{1}{2} \left\{ \Omega e^{-i \omega_d t} b_1^\dagger + \mathrm{H.c.} \right\}
-+ \frac{g}{\Delta} \left( b_1^\dagger b_1 - \frac{1}{2} \right) \left\{ \Omega e^{-i \omega_d t} b_2^\dagger + \mathrm{H.c.} \right\}
+&= \tilde{\omega}_1 \sigma_1^+ \sigma_1^- + \tilde{\omega}_2 \sigma_2^+ \sigma_2^-
++ \frac{1}{2} \left\{ \Omega e^{-i \omega_d t} \sigma_1^+ + \mathrm{H.c.} \right\}
++ \frac{g}{\Delta} \left( \sigma_1^+ \sigma_1^- - \frac{1}{2} \right) \left\{ \Omega e^{-i \omega_d t} \sigma_2^+ + \mathrm{H.c.} \right\}
 \end{aligned}
 $$
 
@@ -213,7 +213,7 @@ $$
 
 $$
 \begin{aligned}
-U &= e^{-i \left( \tilde{\omega}_1 b_1^\dagger b_1 + \tilde{\omega}_2 b_2^\dagger b_2 \right) t}
+U &= e^{-i \left( \tilde{\omega}_1 \sigma_1^+ \sigma_1^- + \tilde{\omega}_2 \sigma_2^+ \sigma_2^- \right) t}
 \end{aligned}
 $$
 
@@ -223,8 +223,8 @@ $$
 \begin{aligned}
 H'_\mathrm{rot} &= U^\dagger H' U - i U^\dagger \dot{U}
 \\
-&= \frac{1}{2} \left\{ \Omega e^{-i \left( \omega_d -\tilde{\omega_1} \right) t} b_1^\dagger + \mathrm{H.c.} \right\}
-+ \frac{g}{\Delta} \left( b_1^\dagger b_1 - \frac{1}{2} \right) \left\{ \Omega e^{-i \left( \omega_d -\tilde{\omega_2} \right) t} b_2^\dagger + \mathrm{H.c.} \right\}
+&= \frac{1}{2} \left\{ \Omega e^{-i \left( \omega_d -\tilde{\omega_1} \right) t} \sigma_1^+ + \mathrm{H.c.} \right\}
++ \frac{g}{\Delta} \left( \sigma_1^+ \sigma_1^- - \frac{1}{2} \right) \left\{ \Omega e^{-i \left( \omega_d -\tilde{\omega_2} \right) t} \sigma_2^+ + \mathrm{H.c.} \right\}
 \end{aligned}
 $$
 
@@ -232,7 +232,7 @@ $$
 
 $$
 \begin{aligned}
-H'_\mathrm{rot} &= \frac{1}{2} \left\{ \Omega b_1^\dagger + \mathrm{H.c.} \right\}
+H'_\mathrm{rot} &= \frac{1}{2} \left\{ \Omega \sigma_1^+ + \mathrm{H.c.} \right\}
 \end{aligned}
 $$
 
@@ -242,7 +242,7 @@ $$
 
 $$
 \begin{aligned}
-H'_\mathrm{rot} &= \frac{g}{\Delta} \left( b_1^\dagger b_1 - \frac{1}{2} \right) \left\{ \Omega b_2^\dagger + \mathrm{H.c.} \right\}
+H'_\mathrm{rot} &= \frac{g}{\Delta} \left( \sigma_1^+ \sigma_1^- - \frac{1}{2} \right) \left\{ \Omega \sigma_2^+ + \mathrm{H.c.} \right\}
 \end{aligned}
 $$
 
@@ -254,11 +254,11 @@ $\ket{\psi}_1 = \ket{0}_1$ のとき、
 
 $$
 \begin{aligned}
-H'_\mathrm{rot} &= \frac{g}{\Delta} \left( 0 - \frac{1}{2} \right) \left\{ \Omega b_2^\dagger + \mathrm{H.c.} \right\}
+H'_\mathrm{rot} &= \frac{g}{\Delta} \left( 0 - \frac{1}{2} \right) \left\{ \Omega \sigma_2^+ + \mathrm{H.c.} \right\}
 \\
-&= \frac{1}{2} \left\{ \left( -\frac{g}{\Delta} \Omega \right) b_2^\dagger + \mathrm{H.c.} \right\}
+&= \frac{1}{2} \left\{ \left( -\frac{g}{\Delta} \Omega \right) \sigma_2^+ + \mathrm{H.c.} \right\}
 \\
-&= \frac{1}{2} \left\{ - \Omega' b_2^\dagger + \mathrm{H.c.} \right\}
+&= \frac{1}{2} \left\{ - \Omega' \sigma_2^+ + \mathrm{H.c.} \right\}
 \end{aligned}
 $$
 
@@ -266,11 +266,11 @@ $\ket{\psi}_1 = \ket{1}_1$ のとき、
 
 $$
 \begin{aligned}
-H'_\mathrm{rot} &= \frac{g}{\Delta} \left( 1 - \frac{1}{2} \right) \left\{ \Omega b_2^\dagger + \mathrm{H.c.} \right\}
+H'_\mathrm{rot} &= \frac{g}{\Delta} \left( 1 - \frac{1}{2} \right) \left\{ \Omega \sigma_2^+ + \mathrm{H.c.} \right\}
 \\
-&= \frac{1}{2} \left\{ \left( +\frac{g}{\Delta} \Omega \right) b_2^\dagger + \mathrm{H.c.} \right\}
+&= \frac{1}{2} \left\{ \left( +\frac{g}{\Delta} \Omega \right) \sigma_2^+ + \mathrm{H.c.} \right\}
 \\
-&= \frac{1}{2} \left\{ + \Omega' b_2^\dagger + \mathrm{H.c.} \right\}
+&= \frac{1}{2} \left\{ + \Omega' \sigma_2^+ + \mathrm{H.c.} \right\}
 \end{aligned}
 $$
 
