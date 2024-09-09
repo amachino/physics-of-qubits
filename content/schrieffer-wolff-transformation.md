@@ -407,16 +407,16 @@ H' &= c_{II} \cdot I \otimes I + c_{IZ} \cdot I \otimes Z + c_{ZI} \cdot Z \otim
 \end{aligned}
 $$
 
-のように $\{II, IZ, ZI, ZZ\}$ で展開すると、
+のように $\{II, ZI, IZ, ZZ\}$ で展開すると、
 
 $$
 \begin{aligned}
 c_{II} &= 
 \frac{1}{2} \left( \omega_1 + \omega_2 + \xi \right) \\
-c_{IZ} &=
--\frac{1}{2} \left( \omega_2 - \frac{g^2}{\Delta} + \xi \right) \\
 c_{ZI} &=
 - \frac{1}{2} \left( \omega_1 + \frac{g^2}{\Delta} + \xi \right) \\
+c_{IZ} &=
+-\frac{1}{2} \left( \omega_2 - \frac{g^2}{\Delta} + \xi \right) \\
 c_{ZZ} &= \frac{1}{2} \xi
 \end{aligned}
 $$
