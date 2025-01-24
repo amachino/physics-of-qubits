@@ -424,7 +424,17 @@ $$
 ただし、
 
 $$
-\xi = \frac{g^2(\alpha_1 + \alpha_2)}{(\Delta + \alpha_1)(\Delta - \alpha_2)}
+\begin{aligned}
+\xi &= \frac{g^2(\alpha_1 + \alpha_2)}{(\Delta + \alpha_1)(\Delta - \alpha_2)} \\
+&= 
+\frac{g^2}{\omega_1 - ( \omega_2 + \alpha_2 )}
+-
+\frac{g^2}{( \omega_1 + \alpha_1 ) - \omega_2} \\
+&\equiv 
+\frac{g^2}{\omega_1^\mathrm{ge} - \omega_2^\mathrm{ef}}
+-
+\frac{g^2}{\omega_1^\mathrm{ef} - \omega_2^\mathrm{ge}}
+\end{aligned}
 $$
 
 である。
