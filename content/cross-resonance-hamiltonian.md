@@ -5,7 +5,7 @@ authors:
   - name: Akinori Machino
 ---
 
-# 交差共鳴ゲートのハミルトニアン
+# 交差共鳴ゲートの有効ハミルトニアン
 
 共振周波数 $\omega_1, \omega_2$ を持つ2つの量子ビットが結合定数 $g$ で結合している系において、量子ビット 1 を周波数 $\omega_d$ で駆動するときのハミルトニアンを、
 
@@ -29,11 +29,11 @@ $$
 
 と表すことにする。
 
-$\sigma^+, \sigma^-$ は量子ビットの昇降演算子であり、反交換関係
+$\sigma^+, \sigma^-$ は量子ビットの昇降演算子であり、
 
 $$
 \begin{aligned}
-\left\{ \sigma_i^-, \sigma_i^+ \right\} &= \sigma_i^- \sigma_i^+ + \sigma_i^+ \sigma_i^- = 1
+\left[ \sigma_i^+, \sigma_i^- \right] = 2 \sigma_i^+ \sigma_i^- - 1
 \end{aligned}
 $$
 
@@ -117,9 +117,17 @@ $$
 \\
 &= \frac{g^2}{\Delta} \left[ \sigma_1^+ \sigma_2^-, \sigma_1^- \sigma_2^+ \right]
 \\
-&= \frac{g^2}{ \Delta} \left( \sigma_1^+ \sigma_1^- \sigma_2^- \sigma_2^+ - \sigma_1^- \sigma_1^+ \sigma_2^+ \sigma_2^- \right)
+&= \frac{g^2}{\Delta} \left\{
+\sigma_1^+ \left[ \sigma_2^-, \sigma_1^- \sigma_2^+ \right] + \left[ \sigma_1^+, \sigma_1^- \sigma_2^+ \right] \sigma_2^-
+\right\}
 \\
-&= \frac{g^2}{ \Delta} \left( \sigma_1^+ \sigma_1^- \sigma_2^- \sigma_2^+ + \sigma_1^+ \sigma_1^- \sigma_2^+ \sigma_2^- - \sigma_2^+ \sigma_2^- \right)
+&= \frac{g^2}{\Delta} \left\{
+\sigma_1^+ \sigma_1^- \left[ \sigma_2^-, \sigma_2^+ \right] + \left[ \sigma_1^+, \sigma_1^- \right] \sigma_2^+ \sigma_2^-
+\right\}
+\\
+&= \frac{g^2}{\Delta} \left\{
+\sigma_1^+ \sigma_1^- \left( 1 - 2 \sigma_2^+ \sigma_2^- \right) + \left( 2 \sigma_1^+ \sigma_1^- - 1 \right) \sigma_2^+ \sigma_2^-
+\right\}
 \\
 &= \frac{g^2}{ \Delta} \left( \sigma_1^+ \sigma_1^- - \sigma_2^+ \sigma_2^- \right)
 \end{aligned}
