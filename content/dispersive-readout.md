@@ -5,7 +5,7 @@ authors:
   - name: Akinori Machino
 ---
 
-# 量子ビットの分散読み出しの有効ハミルトニアン
+# 量子ビット分散読み出しのハミルトニアン
 
 読み出し共振器 ($\omega_r$) と量子ビット ($\omega_q$) が、結合定数 $g$ で結合する Jaynes-Cummings モデル
 
@@ -15,7 +15,7 @@ H = \omega_r a^\dagger a + \omega_q \sigma_+ \sigma_- + g \left( a^\dagger \sigm
 \end{aligned}
 $$
 
-からスタートし、分散読み出しの有効ハミルトニアン
+からスタートし、分散読み出し (dispersive readout) の有効ハミルトニアン
 
 $$
 \begin{aligned}
@@ -25,7 +25,9 @@ $$
 
 を摂動論的に導出しよう。
 
-$\Delta = \omega_q - \omega_r$ とし、分散極限 $|g/\Delta| \ll 1$ を仮定して、Schrieffer-Wolff 変換を適用する。
+$\Delta = \omega_q - \omega_r$ とし、分散極限 (dispersive limit) $|\frac{g}{\Delta}| \ll 1$ を仮定して、Schrieffer-Wolff 変換を適用する。
+
+ハミルトニアン $H$ を基底項 $H_0$ と摂動項 $V$
 
 $$
 \begin{aligned}
@@ -35,7 +37,7 @@ V &= g \left( a^\dagger \sigma_- + a \sigma_+ \right)
 \end{aligned}
 $$
 
-と分け、
+とに分け、
 
 $$
 [H_0, S] = -V
@@ -47,7 +49,7 @@ $$
 S = \alpha(a^\dagger \sigma_- - a \sigma_+)
 $$
 
-の形を仮定し、 $[H_0, S] = -V$ を満たす $\alpha$ を求める。
+の形を仮定し、$\alpha$ を求めよう。
 $$
 \begin{aligned}
 [H_0, S] &= \alpha \left[ \omega_r a^\dagger a + \omega_q \sigma_+ \sigma_-, a^\dagger \sigma_- - a \sigma_+ \right]
@@ -55,8 +57,6 @@ $$
 &= \alpha \left(\omega_r \left[ a^\dagger a, a^\dagger \sigma_- - a \sigma_+ \right] +  \omega_q \left[ \sigma_+ \sigma_-, a^\dagger \sigma_- - a \sigma_+ \right] \right)
 \end{aligned}
 $$
-
-ここで、$\left[ a^\dagger a, a^\dagger \sigma_- - a \sigma_+ \right]$ と $\left[ \sigma_+ \sigma_-, a^\dagger \sigma_- - a \sigma_+ \right]$ を計算する。
 
 $$
 \begin{aligned}
@@ -115,8 +115,6 @@ H' &= U^\dagger H U
 \\
 &= e^{-S} H e^S
 \\
-&= e^{-S} H_0 e^S + e^{-S} V e^S
-\\
 &= H + \left[ H, S \right] + \frac{1}{2} \left[ \left[ H, S \right], S \right] + \cdots
 \end{aligned}
 $$
@@ -141,12 +139,11 @@ $$
 
 $$
 \begin{aligned}
-H' \simeq H_0 + \frac{1}{2} \left[ V, S \right]
+H' ＝ H_0 + \frac{1}{2} \left[ V, S \right]
 \end{aligned}
 $$
 
-である。
-
+となる。
 
 $$
 \begin{aligned}
@@ -158,7 +155,7 @@ $$
 \\
 &= -\frac{g^2}{\Delta} \left[ a^\dagger \sigma_-, a \sigma_+ \right]
 \\
-&= \frac{g^2}{\Delta} \left(
+&= -\frac{g^2}{\Delta} \left(
 a^\dagger \left[ \sigma_-, a \sigma_+ \right] + \left[ a^\dagger, a \sigma_+ \right] \sigma_-
 \right)
 \\
@@ -184,7 +181,9 @@ a^\dagger a \sigma_z - \sigma_+ \sigma_- \right)
 \end{aligned}
 $$
 
-となる。
+と書ける。
+
+この第三項 $-\frac{g^2}{\Delta} a^\dagger a \sigma_z$ を共振器の周波数に寄与する項とみなすと、分散読み出しの有効ハミルトニアンは次のように整理できる。
 
 $$
 \begin{aligned}
@@ -198,9 +197,11 @@ $$
 
 ここで、 $\chi = \frac{g^2}{\Delta}$ とし、 $\tilde\omega_q = \omega_q + \frac{g^2}{\Delta}$ と定義した。
 
-また、 $\sigma_z$ の固有値は $+1$ と $-1$ であるから、分散読み出しの有効ハミルトニアンは、量子ビットが基底状態、励起状態のときに、それぞれ読み出し共振器の周波数が $\omega_r - \chi$、$\omega_r + \chi$ になることを意味する。
+$\sigma_z$ の固有値は $+1$ と $-1$ であるから、分散読み出しの有効ハミルトニアンは、量子ビットが基底状態 $\ket{g}$ 、励起状態 $\ket{e}$ のときに、それぞれ読み出し共振器の周波数が $\omega_r - \chi$、$\omega_r + \chi$ になることを意味する。
 
-また、
+通常、 $\Delta = \omega_q - \omega_r < 0$ であるから、分散シフト $\chi = \frac{g^2}{\Delta}$ は負の値である。つまり、量子ビットが励起状態のとき、読み出し共振器の周波数は下がることになる。
+
+また、第三項 $-\frac{g^2}{\Delta} a^\dagger a \sigma_z$ を量子ビットの周波数に寄与する項とみなすと、分散読み出しの有効ハミルトニアンは次のようにも解釈できる。
 
 $$
 \begin{aligned}
@@ -214,4 +215,6 @@ H' &= \omega_r a^\dagger a + \left( \omega_q + \frac{g^2}{\Delta} \right) \sigma
 \end{aligned}
 $$
 
-とも書ける。
+ここで、 $\tilde\omega_r = \omega_r - \frac{g^2}{\Delta}$ とし、 $\tilde\omega_q = \omega_q + \frac{g^2}{\Delta}$ と定義した。
+
+この形では、量子ビットの周波数が共振器内の光子数 $n = a^\dagger a$ に依存することがわかる。つまり、量子ビットの周波数は、共振器内が1つ増加する毎に $2\chi$ だけシフト（$\chi$ が負の値であれば減少）する。
